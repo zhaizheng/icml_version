@@ -1,0 +1,37 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Manifold Parameterization}{3}{subsection.1.1}
+\contentsline {section}{\numberline {2}Related work}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Manifold approximation by Linear Methods}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Manifold approximation by Nonlinear Least-square Approach}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Difference}{5}{subsection.2.3}
+\contentsline {section}{\numberline {3}Preliminary: Tensor Operation}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Multiplication}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Differentiation}{6}{subsection.3.2}
+\contentsline {section}{\numberline {4}Fitting Model}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}Locally Defined Coordinate}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Paraboloid function in high-dimensional space }{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Fitting Model}{9}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Closed-form of $S^k$ by Vectorization}{9}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Sample Related Weights}{11}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Solution Behavior for $S^k$(or $\theta _k$)}{11}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Perturbation Analysis}{12}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Geometric Interpretation of $S^k$}{12}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}Asymptotic Properties}{14}{subsection.4.9}
+\contentsline {section}{\numberline {5}Manifold Fitting via Nonlinear Projection}{14}{section.5}
+\contentsline {subsection}{\numberline {5.1}Projection onto Manifold}{14}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Quadratic Approximation}{15}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Origin Point Selection}{19}{subsection.5.3}
+\contentsline {section}{\numberline {6}Algorithm: Projection by Repeated Nonlinear Least Square}{20}{section.6}
+\contentsline {section}{\numberline {7}Higher-degree extension}{20}{section.7}
+\contentsline {subsection}{\numberline {7.1}Higher-order manifold fitting}{20}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Projection}{21}{subsection.7.2}
+\contentsline {section}{\numberline {8}Simulation}{21}{section.8}
+\contentsline {subsection}{\numberline {8.1}Data Recovery Capability}{22}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Orthogonal Property}{23}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Parameters Reliance}{24}{subsection.8.3}
+\contentsline {section}{\numberline {A}Appendix\ A}{25}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Asymptotic Property}{25}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}Distance from $x_0$ to manifold}{27}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3}Contraction Proof}{29}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.4}Optimizing with $S^k$ }{30}{subsection.A.4}
+\contentsline {section}{References}{30}{section*.9}

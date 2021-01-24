@@ -1,0 +1,173 @@
+\begin{thebibliography}{12}
+% BibTex style file: imsart-nameyear.bst, 2017-11-03
+% Default style options (sort=1,type=nameyear).
+% Used options (sort=1,type=nameyear).
+
+\bibitem[\protect\citeauthoryear{Belkin and Niyogi}{2003}]{belkin2003laplacian}
+\begin{barticle}[author]
+\bauthor{\bsnm{Belkin},~\bfnm{Mikhail}\binits{M.}} \AND
+  \bauthor{\bsnm{Niyogi},~\bfnm{Partha}\binits{P.}}
+(\byear{2003}).
+\btitle{Laplacian eigenmaps for dimensionality reduction and data
+  representation}.
+\bjournal{Neural computation}
+\bvolume{15}
+\bpages{1373--1396}.
+\end{barticle}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Davenport et~al.}{2010}]{davenport2010joint}
+\begin{barticle}[author]
+\bauthor{\bsnm{Davenport},~\bfnm{Mark~A}\binits{M.~A.}},
+  \bauthor{\bsnm{Hegde},~\bfnm{Chinmay}\binits{C.}},
+  \bauthor{\bsnm{Duarte},~\bfnm{Marco~F}\binits{M.~F.}} \AND
+  \bauthor{\bsnm{Baraniuk},~\bfnm{Richard~G}\binits{R.~G.}}
+(\byear{2010}).
+\btitle{Joint manifolds for data fusion}.
+\bjournal{IEEE Transactions on Image Processing}
+\bvolume{19}
+\bpages{2580--2594}.
+\end{barticle}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Fefferman et~al.}{2018}]{fefferman2018fitting}
+\begin{binproceedings}[author]
+\bauthor{\bsnm{Fefferman},~\bfnm{Charles}\binits{C.}},
+  \bauthor{\bsnm{Ivanov},~\bfnm{Sergei}\binits{S.}},
+  \bauthor{\bsnm{Kurylev},~\bfnm{Yaroslav}\binits{Y.}},
+  \bauthor{\bsnm{Lassas},~\bfnm{Matti}\binits{M.}} \AND
+  \bauthor{\bsnm{Narayanan},~\bfnm{Hariharan}\binits{H.}}
+(\byear{2018}).
+\btitle{Fitting a putative manifold to noisy data}.
+In \bbooktitle{Conference On Learning Theory}
+\bpages{688--720}.
+\end{binproceedings}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Genovese
+  et~al.}{2014}]{genovese2014nonparametric}
+\begin{barticle}[author]
+\bauthor{\bsnm{Genovese},~\bfnm{Christopher~R}\binits{C.~R.}},
+  \bauthor{\bsnm{Perone-Pacifico},~\bfnm{Marco}\binits{M.}},
+  \bauthor{\bsnm{Verdinelli},~\bfnm{Isabella}\binits{I.}},
+  \bauthor{\bsnm{Wasserman},~\bfnm{Larry}\binits{L.}} \betal{et~al.}
+(\byear{2014}).
+\btitle{Nonparametric ridge estimation}.
+\bjournal{The Annals of Statistics}
+\bvolume{42}
+\bpages{1511--1545}.
+\end{barticle}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Goodfellow et~al.}{2014}]{NIPS2014_5ca3e9b1}
+\begin{binproceedings}[author]
+\bauthor{\bsnm{Goodfellow},~\bfnm{Ian}\binits{I.}},
+  \bauthor{\bsnm{Pouget-Abadie},~\bfnm{Jean}\binits{J.}},
+  \bauthor{\bsnm{Mirza},~\bfnm{Mehdi}\binits{M.}},
+  \bauthor{\bsnm{Xu},~\bfnm{Bing}\binits{B.}},
+  \bauthor{\bsnm{Warde-Farley},~\bfnm{David}\binits{D.}},
+  \bauthor{\bsnm{Ozair},~\bfnm{Sherjil}\binits{S.}},
+  \bauthor{\bsnm{Courville},~\bfnm{Aaron}\binits{A.}} \AND
+  \bauthor{\bsnm{Bengio},~\bfnm{Yoshua}\binits{Y.}}
+(\byear{2014}).
+\btitle{Generative Adversarial Nets}.
+In \bbooktitle{Advances in Neural Information Processing Systems}
+(\beditor{\bfnm{Z.}\binits{Z.}~\bsnm{Ghahramani}},
+  \beditor{\bfnm{M.}\binits{M.}~\bsnm{Welling}},
+  \beditor{\bfnm{C.}\binits{C.}~\bsnm{Cortes}},
+  \beditor{\bfnm{N.}\binits{N.}~\bsnm{Lawrence}} \AND
+  \beditor{\bfnm{K.~Q.}\binits{K.~Q.}~\bsnm{Weinberger}}, eds.)
+\bvolume{27}
+\bpages{2672--2680}.
+\bpublisher{Curran Associates, Inc.}
+\end{binproceedings}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Ozertem and
+  Erdogmus}{2011}]{ozertem2011locally}
+\begin{barticle}[author]
+\bauthor{\bsnm{Ozertem},~\bfnm{Umut}\binits{U.}} \AND
+  \bauthor{\bsnm{Erdogmus},~\bfnm{Deniz}\binits{D.}}
+(\byear{2011}).
+\btitle{Locally defined principal curves and surfaces}.
+\bjournal{Journal of Machine learning research}
+\bvolume{12}
+\bpages{1249--1286}.
+\end{barticle}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Panaretos, Pham and
+  Yao}{2014}]{panaretos2014principal}
+\begin{barticle}[author]
+\bauthor{\bsnm{Panaretos},~\bfnm{Victor~M}\binits{V.~M.}},
+  \bauthor{\bsnm{Pham},~\bfnm{Tung}\binits{T.}} \AND
+  \bauthor{\bsnm{Yao},~\bfnm{Zhigang}\binits{Z.}}
+(\byear{2014}).
+\btitle{Principal flows}.
+\bjournal{Journal of the American Statistical Association}
+\bvolume{109}
+\bpages{424--436}.
+\end{barticle}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Roweis and Saul}{2000}]{roweis2000nonlinear}
+\begin{barticle}[author]
+\bauthor{\bsnm{Roweis},~\bfnm{Sam~T}\binits{S.~T.}} \AND
+  \bauthor{\bsnm{Saul},~\bfnm{Lawrence~K}\binits{L.~K.}}
+(\byear{2000}).
+\btitle{Nonlinear dimensionality reduction by locally linear embedding}.
+\bjournal{science}
+\bvolume{290}
+\bpages{2323--2326}.
+\end{barticle}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Sober and Levin}{2019}]{sober2019manifold}
+\begin{barticle}[author]
+\bauthor{\bsnm{Sober},~\bfnm{Barak}\binits{B.}} \AND
+  \bauthor{\bsnm{Levin},~\bfnm{David}\binits{D.}}
+(\byear{2019}).
+\btitle{Manifold approximation by moving least-squares projection (mmls)}.
+\bjournal{Constructive Approximation}
+\bpages{1--46}.
+\end{barticle}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Tenenbaum, De~Silva and
+  Langford}{2000}]{tenenbaum2000global}
+\begin{barticle}[author]
+\bauthor{\bsnm{Tenenbaum},~\bfnm{Joshua~B}\binits{J.~B.}},
+  \bauthor{\bsnm{De~Silva},~\bfnm{Vin}\binits{V.}} \AND
+  \bauthor{\bsnm{Langford},~\bfnm{John~C}\binits{J.~C.}}
+(\byear{2000}).
+\btitle{A global geometric framework for nonlinear dimensionality reduction}.
+\bjournal{science}
+\bvolume{290}
+\bpages{2319--2323}.
+\end{barticle}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Yao and Xia}{2019}]{yao2019manifold}
+\begin{barticle}[author]
+\bauthor{\bsnm{Yao},~\bfnm{Zhigang}\binits{Z.}} \AND
+  \bauthor{\bsnm{Xia},~\bfnm{Yuqing}\binits{Y.}}
+(\byear{2019}).
+\btitle{Manifold Fitting under Unbounded Noise}.
+\bjournal{arXiv preprint arXiv:1909.10228}.
+\end{barticle}
+\endbibitem
+
+\bibitem[\protect\citeauthoryear{Zhang and Zha}{2004}]{zhang2004principal}
+\begin{barticle}[author]
+\bauthor{\bsnm{Zhang},~\bfnm{Zhenyue}\binits{Z.}} \AND
+  \bauthor{\bsnm{Zha},~\bfnm{Hongyuan}\binits{H.}}
+(\byear{2004}).
+\btitle{Principal manifolds and nonlinear dimensionality reduction via tangent
+  space alignment}.
+\bjournal{SIAM journal on scientific computing}
+\bvolume{26}
+\bpages{313--338}.
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}

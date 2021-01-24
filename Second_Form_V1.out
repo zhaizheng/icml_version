@@ -1,0 +1,38 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Fitting Model}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Manifold Parameterization}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Related work}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Manifold approximation by Linear Methods}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.2}{Manifold approximation by Nonlinear Least-square Approach}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Difference}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Preliminary: Tensor Operation}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Multiplication}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Differentiation}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Fitting Model}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Quadratic surface in 3-D space}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.2}{Quadratic surface in high-dimensional space }{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.3}{Fitting Model}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.4}{Closed-form of Sk by Vectorization}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.5}{Sample Related Weights}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.6}{Solution Behavior for Sk\(or k\)}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.7}{Perturbation Analysis}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.8}{Geometric Interpretation of Sk}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.9}{Asymptotic Properties}{section.4}% 20
+\BOOKMARK [1][-]{section.5}{Manifold Fitting via Nonlinear Projection}{}% 21
+\BOOKMARK [2][-]{subsection.5.1}{Projection onto Manifold}{section.5}% 22
+\BOOKMARK [2][-]{subsection.5.2}{Quadratic Approximation}{section.5}% 23
+\BOOKMARK [2][-]{subsection.5.3}{Origin Point Selection}{section.5}% 24
+\BOOKMARK [1][-]{section.6}{Algorithm: Projection by Repeated Nonlinear Least Square}{}% 25
+\BOOKMARK [1][-]{section.7}{Higher-degree extension}{}% 26
+\BOOKMARK [2][-]{subsection.7.1}{Higher-order manifold fitting}{section.7}% 27
+\BOOKMARK [2][-]{subsection.7.2}{Projection}{section.7}% 28
+\BOOKMARK [1][-]{section.8}{Simulation}{}% 29
+\BOOKMARK [2][-]{subsection.8.1}{Data Recovery Capability}{section.8}% 30
+\BOOKMARK [2][-]{subsection.8.2}{Orthogonal Property}{section.8}% 31
+\BOOKMARK [2][-]{subsection.8.3}{Parameters Reliance}{section.8}% 32
+\BOOKMARK [1][-]{appendix.A}{Appendix A}{}% 33
+\BOOKMARK [2][-]{subsection.A.1}{Asymptotic Property}{appendix.A}% 34
+\BOOKMARK [2][-]{subsection.A.2}{Distance from x0 to manifold}{appendix.A}% 35
+\BOOKMARK [2][-]{subsection.A.3}{Contraction Proof}{appendix.A}% 36
+\BOOKMARK [2][-]{subsection.A.4}{Optimizing with Sk }{appendix.A}% 37
+\BOOKMARK [1][-]{section*.7}{References}{}% 38
