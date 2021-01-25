@@ -103,7 +103,7 @@
 \printAffiliationsAndNotice{\icmlEqualContribution} % otherwise use the standard text.
 
 \begin{abstract}
-In this paper, we propose to fit the manifold by a quadratic function defined on the tangent space with a specific form. Compared with the existing linear approximation methods, the quadratic approximation approach can fit the unknown manifold with higher precisions. Because more complicated function is adopted in our manifold fitting process, the pulling back approach turns from the linear least square problem into a nonlinear quartic minimization problem. By bringing in the auxiliary function, we solve the quartic by repeatedly solving a series of quadric minimization problems. Numerical experiments demonstrate that our method has a very strong recovery capability compared with the current works.
+In this paper, we propose to fit the manifold by a quadratic function defined on the tangent space with a specific form. Compared with the existing linear approximation methods, the quadratic approximation approach can fit the unknown manifold with higher precisions. Because more complicated function is adopted in our manifold fitting process, the pulling back approach turns from the linear least square problem into a nonlinear quartic minimization problem. By bringing in the auxiliary function, we solve the quartic by repeatedly solving a series of quadric minimization problems. Numerical experiments demonstrate that our method has a strong recovery capability compared with the current works.
 
 %This document provides a basic paper template and submission guidelines.
 %Abstracts must be a single paragraph, ideally between 4--6 sentences long.
@@ -121,9 +121,9 @@ To handle the high-dimensional data, there are mainly two approaches. First, rec
  
  The other approach try to fit a new smooth manifold by reducing the noise existing in the data. After the fitting process, the true signal will be strengthened and the noise factors will be diminished. Kernel density estimation \cite{genovese2014nonparametric,ozertem2011locally} is a very popular tool for the manifold fitting by transforming the manifold fitting problem into the ridge estimation problem. The ridge is defined as the set of points which satisfy some relation on gradient and Hessian of the density function. Overall, all the manifold fitting process can be considered with two steps. First, estimate the tangent space which is often implemented through the eigenvalue-decomposition of the covariance matrix. Second,  estimate an attraction force which is a  direction which points to somewhere near the manifold, this direction often constructed via the weighted shift-mean approach. By using the subspace constraint mean shift algorithm, we can move the outlier onto the manifold to some degree.
  
- The approximation error for the local affine space will yield an approximate error of $\|\tau\|_2^2$, where $\tau$ is the local coordinate. In other words, when we restrict the error subjects to the condition $\|\tau\|_2^2\leq \epsilon$, the maximum radius of the valid region is with the order of $\epsilon^{1/2}$. In this paper, we propose to approximate the manifold via the quadric function, by adopting this strategy, the approximation error will become $\|\tau\|_2^3$.  With the same precision requirement $\epsilon$, we have the maximum radius of our interested region is of the order $\epsilon^{1/3}$. Normally, $\epsilon$ is some scalar less than $1$, in this way, the quadratic approximation is a better approximation compared with the tangent affine plane.That is to say, to achieve the same precision, we will need much less times of fitting process.
+% The approximation error for the local affine space will yield an approximate error of $\|\tau\|_2^2$, where $\tau$ is the local coordinate. In other words, when we restrict the error subjects to the condition $\|\tau\|_2^2\leq \epsilon$, the maximum radius of the valid region is with the order of $\epsilon^{1/2}$. In this paper, we propose to approximate the manifold via the quadric function, by adopting this strategy, the approximation error will become $\|\tau\|_2^3$.  With the same precision requirement $\epsilon$, we have the maximum radius of our interested region is of the order $\epsilon^{1/3}$. Normally, $\epsilon$ is some scalar less than $1$, in this way, the quadratic approximation is a better approximation compared with the tangent affine plane.That is to say, to achieve the same precision, we will need much less times of fitting process.
 
-A good approximation of the underlying manifold is the first step in our manifold fitting problem. The second important step needs to project the noisy data onto the fitted manifold which we obtained in the first step. Here, the term `project' has two meanings. First, the distance should be minimum, second, the direction of the projection should be perpendicular with the tangent place of the fitted manifold. A major reason for the linear approximation to be very widely used is the form of projection yields a very simple linear least square problem.
+A good approximation of the underlying manifold is the first step in our manifold fitting problem. The second important step needs to project the noisy data onto the fitted manifold which we obtained in the first step. Here, the term `project' has two meanings. First, the distance should be minimum, second, the direction of the projection should be perpendicular with the tangent place of the fitted manifold. A major reason for the linear approximation to be very widely used is the form of projection yields a quite simple linear least square problem.
 
 
 %\begin{figure}[h] %  figure placement: here, top, bottom, or page
@@ -133,13 +133,12 @@ A good approximation of the underlying manifold is the first step in our manifol
 %   \label{3-D paraboloid}
 %\end{figure}
 
-\subsection{Fitting Model}
-In this paper, we are not concentrating on finding the representation of $\phi(\tau)$ under the noiseless assumption. Instead, we assume to have the observations drawn from some low-dimensional manifold and disturbed by some noise, i.e,
+\subsection{Model Setting}
+In this paper, we are not concentrating on finding the representation of $\phi(\tau)$ under the noiseless assumption. Instead, we assume to have the observations drawn from some low-dimensional manifold and disturbed by some noise, i.e, 
 \[
 x_i = \tilde{x}_i+\epsilon_i, \quad \tilde{x}_i \in \cal M,
-\] 
+\]
 where $\epsilon_i$ is the noise which obeys some distribution, such as the multi-dimensional gaussian distribution.
-
 Since the observations $\{x_i, i=1:n\}$ are discrete distributed, the idea of manifold fitting aims at generalizing the discrete data and obtaining a lower-dimensional approximation of the dataset. The manifold fitting approach can be written as a parametric estimation problem under the observations and the constrained model $\cal G$, i.e,
 \begin{equation}\label{estimator1}
  \theta_* =\arg \min_\theta  \sum_i {\rm Loss}(x_i, {\cal G}, \theta ),
@@ -168,16 +167,17 @@ x(\tau)=  x_0 + U_{x_0} \tau+ U_{x_0}^{\perp} \phi_{x_0} (\tau),
 \end{equation}
 where the columns of $U_{x_0}$ are the basis on the tangent space and the columns in $U_{x_0}^{\perp}$ are the basis on the normal space. 
 
-
-In other words, corresponding to $x_0$ and $\cal M$, there is some radius $r$, such that:
-\begin{equation}\label{model}
- {\cal M}\cap {\cal D}_{x_0}(r) =  \{y | y =  x_0 + U_{x_0} \tau+ U_{x_0}^{\perp} \phi_{x_0} (\tau), \tau\in {\mathbb R}^d\}\cap {\cal D}_{x_0}(r).
-\end{equation}
-where ${\cal D}_{x_0}(r) = \{x|\|x-x_0\|\leq r\}$, $\phi_{x_0}(\tau)=[\phi_{x_0}^{d+1}(\tau),...,\phi_{x_0}^{D}(\tau)]^T$  is the function defined on the tangent space, the range of $\phi_{x_0}(\tau)$ represents the coordinate in the normal space and $\tau$ is the local coordinate in the tangent space.
+%
+%In other words, corresponding to $x_0$ and $\cal M$, there is some radius $r$, such that:
+%\begin{equation}\label{model}
+% {\cal M}\cap {\cal D}_{x_0}(r) =  \{y | y =  x_0 + U_{x_0} \tau+ U_{x_0}^{\perp} \phi_{x_0} (\tau), \tau\in {\mathbb R}^d\}\cap {\cal D}_{x_0}(r).
+%\end{equation}
+%where ${\cal D}_{x_0}(r) = \{x|\|x-x_0\|\leq r\}$, $\phi_{x_0}(\tau)=[\phi_{x_0}^{d+1}(\tau),...,\phi_{x_0}^{D}(\tau)]^T$  is the function defined on the tangent space, the range of $\phi_{x_0}(\tau)$ represents the coordinate in the normal space and $\tau$ is the local coordinate in the tangent space.
 
 \begin{figure}[t!] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=\linewidth]{democ3.eps} 
+   \vspace{-0.4cm}
    \caption{The reliance of the origin point in the process of manifold fitting and projection}
    \label{Comparison}
 \end{figure}
@@ -257,15 +257,18 @@ In addition, we show that, by adopting the dominant term in the Taylor expansion
 %\item[3.] The projection of outlier $r$ onto the fitted manifold $\cal M_A$ is not restraint to be the origin point of ${\cal M_A}$. It can be any points $\cal M_A$ as long as the minimum criteria is achieved.
 %\end{itemize}
 The strengths of our method can be summarized as:
-\begin{itemize}
-\item[1.] By fitting a function with the quadratic form, the curvature of the manifold is considered in our algorithm. Because of the existing of the curvature, the fitted manifold ${\cal M}_{\cal A}$ can approximate the true manifold in a relatively larger scope.
-\item[2.] Our algorithm does not rely on the accuracy of the estimated origin point too much, which means a relatively rough estimation of the origin is accessible in our algorithm. Instead of the origin, we just need to get a point (nearby $x$) which is also supposed to be next to the true $\cal M$.
-\item[3.] The solution of our algorithm has a clear geometric interpretation via the optimized $\hat{\tau}$.  When we got the local coordinate $\hat{\tau}$, we can think of our projected point $x(\hat{\tau})$ ( the projection onto ${\cal M}_{\cal A}$) as a modification of the origin $x_0$, through,
+%\begin{itemize}
+
+1. By fitting a function with the quadratic form, the curvature of the manifold is considered in our algorithm. Because of the existing of the curvature, the fitted manifold ${\cal M}_{\cal A}$ can approximate the true manifold in a relatively larger scope.
+
+2. Our algorithm does not rely on the accuracy of the estimated origin point too much, which means a relatively rough estimation of the origin is accessible in our algorithm. Instead of the origin, we just need to get a point (nearby $x$) which is also supposed to be next to the true $\cal M$.
+
+3. The solution of our algorithm has a clear geometric interpretation via the optimized $\hat{\tau}$.  When we got the local coordinate $\hat{\tau}$, we can think of our projected point $x(\hat{\tau})$ ( the projection onto ${\cal M}_{\cal A}$) as a modification of the origin $x_0$, through,
 \[
 x(\tau) = U_\perp {\cal A}(\tau,\tau) + U\tau + x_0. 
 \]
 where $U\tau$ is the modification of $x_0$ in the tangent space and ${\cal A}(\tau,\tau)$ is the modification of $x_0$ in the normal space.
-\end{itemize}
+%\end{itemize}
 %\section{Preliminary: Tensor Operation} 
 %In this section, we give some preliminary knowledge with tensor operation and tensor differentiation. Using tensor notations  will bring in lots of convenience in our notations and discussion.
 %\subsection{Multiplication}
@@ -310,17 +313,19 @@ For a complicate nonlinear function $\phi(\tau)$, we can fit locally via the low
 &+ \frac{1}{2} \nabla_\tau \nabla_\tau \phi(\tau)|_{\tau=\tau_0} (\tau-\tau_0,\tau-\tau_0).
 \end{aligned}
 \end{equation}
-\begin{itemize}
-\item[1.] The linear function
+%\begin{itemize}
+
+1. The linear function
 $
 \phi(\tau_0) + \langle \nabla_\tau \phi(\tau)|_{\tau=\tau_0}, \tau-\tau_0 \rangle
 $ 
 can be thought as a locally fitting model of $\phi(\tau)$ at $\tau=\tau_0$ with the error of order $O(\|\tau-\tau_0 \|_2^2)$.
-\item[2.] The quadratic function \eqref{quadratic_f} can be thought as a locally fitting model of $\phi(\tau)$ at $\tau=\tau_0$ with the error of order $O(\|\tau-\tau_0 \|_2^3)$.
+
+2. The quadratic function \eqref{quadratic_f} can be thought as a locally fitting model of $\phi(\tau)$ at $\tau=\tau_0$ with the error of order $O(\|\tau-\tau_0 \|_2^3)$.
 %\begin{equation}\label{quadratic_f}
 %\phi(\tau_0) + \langle \nabla_\tau \phi(\tau)|_{\tau=\tau_0}, \tau-\tau_0 \rangle+\frac{1}{2} \nabla_\tau \nabla_\tau \phi(\tau)|_{\tau=\tau_0} (\tau-\tau_0,\tau-\tau_0)
 %\end{equation}
-\end{itemize}
+%\end{itemize}
 In this paper, we solve the manifold fitting problem via the local quadratic approximation under the noisy observations. To simplify the problem, we first assume:
 %\begin{assumption}
 %Assume the observations $\{x_i, i=1,...n\}$ and the origin $x_0$ are drawn exactly from some unknown $d$-dimensional manifold $\cal M$ which is embedded in the $D$-dimensional ambient space.
@@ -330,27 +335,26 @@ In this paper, we solve the manifold fitting problem via the local quadratic app
 
 \subsection{Quadratic surface in 3-D space}
 A manifold is a topological space that locally resembles Euclidean space. Except for a few special cases, we cannot have global representation to parameterize the manifold. As a result, we try to approximate the manifold locally within an interested area. First, we show a simple demo for our motivation.
-
 \begin{example}
-%We give an example by constructing a fitted paraboloid surface in 3-dimensional Space.
-The data of blue circles evenly distributed on a 2-D sphere as shown in \eqref{3-D paraboloid} is a toy example of manifold. Fixing a point $x_0\in {\mathbb S}^2$, we can have a tangent place. The yellow circles are the projection of the data onto the tangent plane. The continuous elliptical paraboloid surface is the structure what we wanted.
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=2.5in]{demo.eps} 
+   \includegraphics[width=0.7\linewidth]{demo.eps} 
+   \vspace{-0.4cm}
    \caption{ Fitting a manifold with the elliptical paraboloid surface}
    \label{3-D paraboloid}
 \end{figure}
-
+%We give an example by constructing a fitted paraboloid surface in 3-dimensional Space.
+The data of blue circles evenly distributed on a 2-D sphere as shown in \eqref{3-D paraboloid} is a toy example of manifold. Fixing a point $x_0\in {\mathbb S}^2$, we can have a tangent place. The yellow circles are the projection of the data onto the tangent plane. The continuous elliptical paraboloid surface is the structure what we wanted.
 %As shown in the Figure \eqref{3-D paraboloid}, the yellow circle $\circ$ is the projection of the points from the 3-dimensional ball onto the tangent space. The mesh surface is the fitted structure to locally approximate the manifold (3-dimensional ball). 
 Obviously, from Figure \ref{3-D paraboloid} we can see that the mesh surface is a better structure to approximate $\mathbb{S}^2$ compared with the tangent plane. Here,  the parameterized function of the quadratic form  $x_A(\tau): {\mathbbm R}^2\rightarrow {\mathbbm R}^3$ yields:
-\[
-x_A(\tau) = x_0 + U_{x_0} \tau + {U_{x_0}^\perp} \tau^T A \tau
-\]
+$
+x_A(\tau) = x_0 + U_{x_0} \tau + {U_{x_0}^\perp} \tau^T A \tau,
+$
 where $A$ is matrix of size $2\times 2$ which is used to control the shape and the direction of the paraboloid surface. The eigenvalues of $A$ represents the curvature or flatness in the corresponding eigenvector direction.
 \end{example}
-\remark{In 3-D space, obviously, 
-when the paraboloid surface is at one side of the tangent plane, the matrix $A$ is positive definite or negative definite.
-}
+%\remark{In 3-D space, obviously, 
+%when the paraboloid surface is at one side of the tangent plane, the matrix $A$ is positive definite or negative definite.
+%}
 \subsection{Quadratic surface in high-dimensional space }
 
  Instead of fitting the manifold by the tangent plane, we bring a unknown function $\phi_{x_0}(\tau)$ from the tangent space to the normal space
@@ -371,11 +375,9 @@ From \eqref{phi}, we know if we are given the structure of $\phi_{x_0}(\tau)$ wi
 
 1, $x_0$ is any point on the manifold we are interested in.
 
-2,  $U_{x_0}$ is the basis of principal space at $x_0$ which can be obtained from the local PCA. 
+2,  $U_{x_0}$ is the basis of principal space at $x_0$ which can be obtained from the local PCA. $U_{x_0}^{\perp}$ is the orthogonal directions at $x_0$ which can also be obtained from the local PCA.
 
-3, $U_{x_0}^{\perp}$ is the orthogonal directions at $x_0$ which can also be obtained from the local PCA.
-
-4, The only remaining part is to  $\phi_{x_0} (\tau)$.
+3, The only remaining part is  $\phi_{x_0} (\tau)$.
 
 %\end{itemize}
 Note that, to implement the local PCA, the local covariance matrix at $x_0$ is defined as $C(x_0) = \sum_i K_h(x_0,x_i) (x_i-x_0)(x_i-x_0)^T$. The basis of the estimated tangent space can be obtained from the eigenvalue decomposition as
@@ -448,18 +450,13 @@ Because of $x_{\cal A}(\tau)-x(\tau) = O(\|\tau\|_2^3)$, we know ${\cal M_A}$ ap
 %\psi(\tau, {\cal A}_{\phi_{x_0}}) = x_0+ U_{x_0} \tau + U_{x_0}^{\perp} {\cal A}_{\phi_{x_0}}(\tau, \tau).
 %\end{equation}
 %We use it to fit manifold at a local domain of $R_{x_0}^D \cap \cal M$. From now on, if we don't need to emphasize the function $\phi_{x_0}$, we abbreviate ${\cal A}_{\phi_{x_0}}$ as $\cal A$ to represent the three order tensor.
-\remark{
+
 %Note, that the range of $\psi(\tau)$ is a quadric approximation of manifold $\cal M$. 
 In most of the manifold fitting cases, both of the true manifold $\cal M$ and the function $\phi_{x_0}(\tau)$ are unknown, as a result, it is impossible for us to get the second order parameter ${\cal A}_{x_0}$ through differentiating the multivariable function $\phi_{x_0}(\tau)$.
-
- Instead of getting the accurate $\phi_{x_0}(\tau)$, we can estimated it by using the data (observations) which is supposed to be drawn from some low-dimensional manifold. In this case, we need to estimate the ${\cal A}_{\phi_{x_0}}$ from the observations to obtain $\hat{\cal A}$, as a result, the range $\cal M_{\hat{\cal A}}$ of $x_{\hat{\cal A}}(\tau)$ can be assumed a local smoothed approximation of $\cal M$ around $x_0$ to some degree.
-}
-
+Instead of getting the accurate $\phi_{x_0}(\tau)$, we can estimated it by using the data (observations) which is supposed to be drawn from some low-dimensional manifold. In this case, we need to estimate the ${\cal A}_{\phi_{x_0}}$ from the observations to obtain $\hat{\cal A}$, as a result, the range $\cal M_{\hat{\cal A}}$ of $x_{\hat{\cal A}}(\tau)$ can be assumed a local smoothed approximation of $\cal M$ around $x_0$ to some degree.
 From now on, we will abbreviate $\hat{\cal A}$ as ${\cal A}$, to stand for the estimated second order parameter.
 \subsection{Fitting Model}
-
 In real case, when we have samples from the manifold, we need to determine  $U_{x_0}, {\cal A}_{\phi_{x_0}}(0)$ by knowing $x_0, \{x_i\}$.
-
 Using local principal analysis, we know for each observation $x_i$, there is a local coordinate $\tau_i = \tau(x_i,x_0, U_{x_0})$ in the tangent space. When we use $x_0$ as the origin of the coordinate. By projecting onto the tangent space, we have the local coordinate has the closed-form solution as
 \begin{equation}\label{tangent_coor}
 \tau_i = U_{x_0}^T (x_i -x_0).
@@ -510,7 +507,6 @@ In the following section, we will show how to vectorize each slice of $\cal A$ a
 
 \subsection{Closed-form of $S^k$ by Vectorization}
 %In this section, we vectorize the matrix, such that we could obtain $S^k$ by using a least square problem with samples $\{x_i\}$.
-
 For any symmetric matrix $A$, we know $A_{ij} = A_{ji}$. Therefore, we can only need ${d(d+1)}/{2}$ elements with the corresponding order to restore it. As a result, we can only vectorize the upper-triangle elements in the matrix $A$ as a vector 
 \[
 {\rm vech}(A,t)_{\frac{(2d-i)(i-1)}{2}+j-i+1} = \left\{
@@ -549,7 +545,7 @@ Note that, we can easily recover the matrix $A$ from the vector ${\rm vech}(A,1/
 \[
 A = {\rm Mat} ({\rm vech}(A,1/2)) + {\rm Mat}^T ({\rm vech}(A,1/2)) 
 \]
-where ${\rm Mat}(y)$ is an operator constructed by realigning the elements in $y$ into a upper-triangle matrix ${\rm Mat} (y)$ such that the $i,j$-th elements equals
+where ${\rm Mat}(y)$ is an operator constructed by realigning the elements in $y$ into an upper-triangle matrix ${\rm Mat} (y)$ such that the $i,j$-th elements equals to
 \[
 {\rm Mat} (y) _{i,j} =\left\{
 \begin{array}{cc}
@@ -587,9 +583,9 @@ For notational convenience, we use $z_i^k$ to stand for the local coordinate in 
 z_i^k =  \frac{1}{2}{(u^k_{x_0})}^T (x_i -x_0). %+ o(\|\tau_i\|_2^2).
 \] 
 From \eqref{g_i}, we know that
-\[
+$
 g_i^T \theta_k  - z_i^k= o(\|\tau_i\|_2^2).
-\]
+$
 To determine the ${d(d+1)}/{2}$ parameters in $\theta_k$, we need ${d(d+1)}/{2}$ linear independent equations. In other words, we need at least ${d(d+1)}/{2}$ samples to construct ${d(d+1)}/{2}$ linear independent $\{g_i, i = 1,...,{d(d+1)}/{2}\}$. 
 
 Suppose, we have $m$ samples on the manifold. Denote the matrix $G$ and the vector $\ell_k$ as
@@ -801,8 +797,9 @@ The manifold fitting problem can be viewed as projecting data $x$ onto a locally
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=0.9\linewidth]{demo3.eps} 
+   \includegraphics[width=0.8\linewidth]{demo3.eps} 
    %\includegraphics[width=0.48\linewidth]{fit_demo.eps} 
+   \vspace{-0.4cm}
    \caption{Demo for the projection via solving the nonlinear least problem. The blue stars `*' are the discrete samples which are assumed to be approximately sampled from some manifold. The paraboloid curve is our fitted manifold with the second order term taken into consideration. The blue diamonds `$\diamond$' are the outliers, which can be any type or distribution. In this demo, we let the outliers to be samples from the $\sin$ curve. The red dots `$\circ$' are the projections of `$\diamond$' onto the paraboloid curve (the fitted manifold). In this section, we give the algorithm to find the projection of outliers onto the fitted second order function.}
    \label{fig:demo}
 \end{figure}
@@ -839,16 +836,18 @@ P_{{\cal M}_{\cal A}}(z) = x_{\cal A}(\hat{\tau})=x(\arg\min_{\tau\in R^d }\|z-x
 %In \eqref{projection_tau}, we minimize the squared of 2-norm instead of 2-norm for two reasons. First, optimizing with respect to $f^2(\cdot)=\|\cdot\|_2^2$ and $f(\cdot)=\|\cdot\|_2$ is equivalent because  $f^2(x)$ and $f(x)$ share the same monotonous property in the intervals of $\{x|f(x)>0\}$. Second, $\|\cdot\|_2^2$ is a polynomial, which has easier form with respect to derivatives for any order.
 %}
 Overall, the projection onto ${\cal M}_{\cal A}$ consists of the following two steps:
-\begin{itemize}
-\item[1.] Solve the nonlinear problem: Given $z$, find $\tau$ such as 
+%\begin{itemize}
+
+1. Solve the nonlinear problem: Given $z$, find $\tau$ such as 
 \begin{equation}\label{nonlinear_projection}
 \hat{\tau} = \min_\tau \|z -  (U_{\perp} {\cal A} (\tau,\tau) + U \tau +x_0)\|_2^2.
 \end{equation}
-\item[2.] Construct the coordinate in the ambient space
+
+2. Construct the coordinate in the ambient space
 \[
 \hat{z} = U_{\perp} {\cal A} (\hat{\tau},\hat{\tau}) + U \hat{\tau} +x_0.
 \]
-\end{itemize}
+%\end{itemize}
 To solve the nonlinear projection problem \eqref{nonlinear_projection}, we can simplify it as
 \begin{equation}\label{simiplified_nonlinear}
 \begin{aligned}
@@ -1027,7 +1026,6 @@ and set the convergence point $\tau^*$ as the coordinate for the true projection
 %
 %Note that, ${\cal A}(\tau,\tau)-c\in {\mathbb R}^{D-d}$, the tensor $\cal A$ acting on the $D-d$ dimensional vector ${\cal A}(\tau,\tau)-c$ is the reduce-sum operation along the third dimension of $\cal A$, which will result in a symmetric matrix.
 %\end{proof}
-
 %\begin{figure}[h] %  figure placement: here, top, bottom, or page
 %   \centering
 %   \includegraphics[width=\linewidth]{fit_demo.eps} 
@@ -1035,7 +1033,6 @@ and set the convergence point $\tau^*$ as the coordinate for the true projection
 %   \label{fig:section_example}
 %\end{figure}
 %In Figure \ref{fig:section_example}, we give a demo by dividing the samples into four partitions as the four $\sin$ curve sets. The projections of the blue `$\diamond$' points are marked as the red `$\circ$' dots which can be regarded as the approximation of the projection onto the real underlying manifold. It is obviously shown from Figure \ref{fig:section_example} that projecting by fitting locally is a good approach to handle the difficult manifold fitting problem. Furthermore, we can fit a locally quadratic manifold for each of the outliers which we want to pull back onto $\cal M$. The details can be seen from the description in the algorithm in section \ref{nonliear projection}.
-
 %Denote $N(x_{\ell}(\tau), {\cal M}, \epsilon )$ and $N(x_{\cal A}(\tau), {\cal M}, \epsilon )$ as the numbers of ${\cal M}_\ell$ and $\cal M_{\cal A}$ to cover the underlying manifold $\cal M$ with the maximum fitting error $\epsilon$. Denote ${\cal M}_{\ell}(x_0)$ and ${\cal M}_{\cal A}(x_0)$ as the fitting manifolds which are the range of functions $x_\ell(\tau)$ and $x_{\cal A}(\tau)$ respectively and goes through $x_0$. We have the following theorem:
 %\begin{theorem}
 %Under the fitting error tolerance setting as $\epsilon$, the ratio for the numbers of the fitting structure needed to cover $\cal M$ by $x_{\ell}(\tau)$ and $x_{\cal A}(\tau)$ yields
@@ -1108,7 +1105,6 @@ and set the convergence point $\tau^*$ as the coordinate for the true projection
 %\]
 %where the last equality is obtained from the optimal condition in \eqref{normal}, that is to say, $x-x^*$ is orthogonal with the subspace $\cal S^*$.
 %\end{proof}
-
 %\section{Origin Point Selection} \label{Origin Point Selection}
 %The selection of the origin point $x_0$ is important for our fitting. A good quality $x_0$ will make the approximation error much smaller. If our observations $\{x_i, i=1,...,n\}$ are drawn exactly from $\cal M$ (no noise contaminated), we can select $x_0$ to be the point which is nearest to $\bar{x}$.
 %\[
@@ -1125,7 +1121,6 @@ and set the convergence point $\tau^*$ as the coordinate for the true projection
 %the equation \eqref{weighted_mean} can be further simplified as a convex combination of samples $\{x_i, i=1,...,n\}$ in the neighborhood ${\cal N}_k(\bar{x})$ of $\bar{x}$ as $x_0 = \sum_{i\in {\cal N}_k (\bar{x})} w_h(\bar{x},x_i) x_i$.
 %
 %Even though $x_0$ is not on the underlying manifold $\cal M$, we can still use it as the origin for $x_{\cal A}$ to project $\bar{x}$.  If obtaining a parameterized manifold $\cal M_A$ to locally approximate $\cal M$, we can quantify the distance between the weighted-mean $x_0$ and $\cal M_A$. Since $\cal M_A$ locally fits $\cal M$, the distance between $x_0$ and $\cal M_A$ can be used in place of the distance between $x_0$ and $\cal M$ as long as the scale of the local coordinate $\tau$ is small enough.
-
 %\begin{assumption}
 %If the observations are drawn from the quadratic manifold, which can be parameterized in the form 
 %$
@@ -1149,26 +1144,26 @@ and set the convergence point $\tau^*$ as the coordinate for the true projection
 %%the distance $d(x_0,{\cal M_A})$ turns smaller when $x_0$ to $\cal M_A$.
 %}
 %
-
 \section{Algorithm: Projection by Repeated Nonlinear Least Square}\label{nonlinear projection}
 Because the underlying manifold is unknown, in real computational cases,  we cannot find a point $x_0\in \cal M$ which is also next to our interested outlier $\bar{x}$. To solve this problem, we use an iteration method to find $x_0$. When $\bar{x}$ is far away from $\cal M$, the inaccurate of $x_0$ is also acceptable. With the process of $\bar{x}$ approaching $\cal M$, we need the accuracy of  $x_0$ to be improved.
-
 Since the observations $\{x_i, i=1,...,n\}$ are drawn from $\cal M$ with noise, for the outlier $\bar{x}$, we can select $x_0$ as the weighted-mean as:
 \begin{equation}\label{weighted_mean}
 x_0 =\frac{1}{\sum_{i\in {\cal N}_k(\bar{x}) } \phi_h(\bar{x},x_i)} \sum_{i\in {\cal N}_k (\bar{x})} \phi_h(\bar{x},x_i)x_i,
 \end{equation}
 where $\phi_h(\bar{x},x_i) = K_h(x_i, \bar{x})$ is the kernel weight and ${\cal N}_k$ controls the neighbor size and $h$ is the bandwidth parameter, which affect the bias and smoothness.
+
 \begin{algorithm}[H]
 \caption{Fitting Algorithm:}
 \label{alg:Fitting}
 \begin{algorithmic}
 \STATE [1.] For outlier $\bar{x}$, compute the shift mean $x_0$ from \eqref{weighted_mean} and use $x_0$ as the origin of our local coordinate to implement our fitting and projection process.
 \STATE [2.] Given $x_0$, neighborhood size $k$ and bandwidth parameters $h$, get the local coordinate $\{\tau_i, \iota_i\}$ for each $x_i$ by applying the eigen-decomposition method.
-\[
+$
 {\tau}_i = U_d^T(x_i-x_0).%,\quad \hat{\iota}_i = {{U^T_{n-d}}}(x_i-x_0)
-\]
+$
 Using $\tau_i$, construct matrix $G$ from $\{\tau_i\}$ such as $G = [g_1,...,g_m]^T$, where each column consists $g_i = {\rm vech}(\tau_i\tau_i^T, 1)$.% is the vectorization form.
-\STATE [3.] Solve the manifold fitting problem for each dimension in the normal space, e.g, solve the weighted least square problem in the $k$-th dimension of the normal space via minimizing:
+\STATE [3.] Solve the manifold fitting problem for each dimension in the normal space, e.g, %solve the weighted least square problem in the $k$-th dimension of the normal space via minimizing:
+for the $k$-th dimension:
 \[
 \begin{aligned}
   &\min_{\theta_k} \sum_{i=1}^m K_h(x_i-\bar{x})\{ g_i^T \theta_k  -  {(u^k_{x_0})}^T (x_i -x_0)/2\}^2\\
@@ -1176,10 +1171,10 @@ Using $\tau_i$, construct matrix $G$ from $\{\tau_i\}$ such as $G = [g_1,...,g_m
 \end{aligned}
 \]
 where the $m$ (number of samples in the neighborhood) dimensional vector $\ell_k$ equals to $[u_k^T(x_1-x_0), u_k^T(x_2-x_0),...,u_k^T(x_n-x_0)]$.
-\STATE [4.] For each $k=1,...,D-d$, transform the vector $\theta_k$ into the matrix form by putting the elements of $\theta_k$ onto the upper-triangle positions to obtain ${\rm Mat}(\theta_k)$.  Afterwards, the symmetric $S_k$ is obtained via%of $M_k = {\rm Mat}(\theta_k)$:
-\[
+\STATE [4.] For each $k=1,...,D-d$, transform the vector $\theta_k$ into the matrix form by putting the elements of $\theta_k$ onto the upper-triangle positions to obtain ${\rm Mat}(\theta_k)$.  Afterwards, the symmetric $S_k$ is obtained via %of $M_k = {\rm Mat}(\theta_k)$:
+$
 S_k = {\rm Mat}(\theta_k) + {\rm Mat}(\theta_k) ^T.
-\]
+$
 By aligning each slice of $S_k$, we obtain the tensor $\cal A$, such that ${\cal A}_{\cdot \cdot k}=S_k$.
 Here, we get a parametrized manifold ${\cal M_A}$ to fit the complicated $\cal M$ locally, where ${\cal M_A}$ yields a form as
 \[
@@ -1202,6 +1197,7 @@ x_{\cal A}(\tau) = U_{d}^{\perp} {\cal A} (\tau, \tau) + U_d \tau +x_0.
 %\STATE [3.] Check whether $\|\hat{x}-\bar{x}\|\leq \epsilon$, if true, stop and output $\hat{x}$, otherwise set $\bar{x}=\hat{x}$ and repeat the steps from A1 to B3.
 \end{algorithmic}
 \end{algorithm}
+Our Algorithm \ref{alg:Fitting and Projection} consists of steps by repeatedly implementing the fitting and projection procedures. The fitting procedures intend to find the parameter of the tensor $\cal A$ from the observations, which represents the curvature of the locally manifold in each of the dimensions for the normal space. When the fitting process finishes, we get the closed-form representation of $x_{\cal A}$. The projection procedures intend to find the projection of $\bar{x}$ on $\cal M_A$ (or the nearest point from  $\bar{x}$ to $\cal M_A$). %In details, we list the steps as:
 \begin{algorithm}[H]
 \caption{Iterative Fitting and Projection Algorithm:}
 \label{alg:Fitting and Projection}
@@ -1217,10 +1213,7 @@ x_{\cal A}(\tau) = U_{d}^{\perp} {\cal A} (\tau, \tau) + U_d \tau +x_0.
 \ENDFOR
 \end{algorithmic}
 \end{algorithm}
-Our Algorithm \ref{alg:Fitting and Projection} consists of steps by repeatedly implementing the fitting and projection procedures. The fitting procedures intend to find the parameter of the tensor $\cal A$ from the observations, which represents the curvature of the locally manifold in each of the dimensions for the normal space. When the fitting process finishes, we get the closed-form representation of $x_{\cal A}$. The projection procedures intend to find the projection of $\bar{x}$ on $\cal M_A$ (or the nearest point from  $\bar{x}$ to $\cal M_A$). %In details, we list the steps as:
-
 %The fitting procedure containing the following three steps:
-
 %\hspace{-4mm}\rule[-10pt]{\linewidth}{0.05em}
 %\end{table}
 %\section{Higher-degree extension}
@@ -1286,9 +1279,18 @@ Our Algorithm \ref{alg:Fitting and Projection} consists of steps by repeatedly i
 %
 %From analyzing the two steps of fitting and projection, we can see our model can be easily generalized into a higher-order approximation form. However, because of the number of unknown parameters increases with the speed of $d^s$, where $s$ is the order and $d$ is the dimension of the tangent space, we need large amount of effective data to fix the higher-order model. Otherwise, too small dataset and quite complicate model will lead to the overfitting problem, which will also diminish the performance of our algorithm.
 \section{Simulation}
-In this section, we compare our nonlinear manifold fitting approach with the existing manifold fitting methods on various occasions. We consider the manifolds having constant curvature and varying curvature. The numerical results show our model can handle all the cases by leading a very promising result.
+To evaluate the performance of different results, we define the criteria $c({\hat{\cal M}})$ which represents the percentage of improvement of the corresponding algorithm
+\[
+c({\hat{\cal M}}) = 1-\frac{d(\hat{\cal M}, {\cal M})}{d({\cal D}, {\cal M})},
+\] 
+where $\cal D$ stands for the set corresponding to `$\diamond$' which is the outlier we want to pull towards the underlining $\cal M$ and $\hat{\cal M}$ stands for the set corresponding to `$\circ$' which is the result of different methods. The distance of $d({\cal D}, {\cal M})$ is defined as:
+\[
+d({\cal D}, {\cal M}) = \frac{1}{n} \sum_{x_i\in {\cal D}} \|x_i-\tilde{x}_i\|_2 = \frac{1}{n} \sum_{x_i\in \cal D} \sigma_2\|\epsilon_i\|_2.
+\] 
+By replacing $\cal D$ with $\hat{\cal M}$, we could similarly get $d(\hat{\cal M}, {\cal M})$.
+%In this section, we compare our nonlinear manifold fitting approach with the existing manifold fitting methods on various occasions. We consider the manifolds having constant curvature and varying curvature. The numerical results show our model can handle all the cases by leading a very promising result.
 \subsection{Data Recovery Capability}
-In this section, we construct some artificial manifolds e.g triangle cure, circle and the swiss-roll, which can be written as a parameterization form as
+In this section, we construct some artificial manifolds e.g the circle and the swiss-roll, which can be written as a parameterization form as
 $
 \left\{
 \begin{array}{c}
@@ -1298,9 +1300,9 @@ y = \psi(t)
 \right.
 $.
 Thus, we have the tangent space is spanned by the vector $(\phi'(t),\psi'(t))$ and the normal space is spanned by the vector $(\psi'(t),-\phi'(t))$. The curvature at $t$ can be calculated as
-\begin{equation}\label{kappa}
-\kappa(t) = \frac{\phi'(t)\psi''(t)-\phi''(t)\psi'(t)}{((\phi'(t))^2+\psi'(t)^2)^{3/2}}.
-\end{equation}
+%\begin{equation}\label{kappa}
+$\kappa(t) = \frac{\phi'(t)\psi''(t)-\phi''(t)\psi'(t)}{((\phi'(t))^2+\psi'(t)^2)^{3/2}}.$
+%\end{equation}
 Especially, when the curve parameterized as $(x,f(x))$, the curvature yields quite a simple form as
 %manifold case of the triangle curve 
 %\[
@@ -1308,22 +1310,22 @@ Especially, when the curve parameterized as $(x,f(x))$, the curvature yields qui
 %\]
 %This curve has a variation curvature depending on $x$. Note that, 
 $\kappa(x) = \frac{|f''(x)|}{(1+f'(x))^{3/2}}$. Next, we give three examples and show the performance of our algorithm.
-\begin{example}
-By substituting the derivatives of the 2-D circle's parametric equation  into \eqref{kappa}. we know that the curvature of the circle $\left\{\begin{array}{c}
-x= \cos(\theta)\\
-y=\sin(\theta)
-\end{array}\right.$ is the constant, such that $\kappa(\theta) = 1$ everywhere.
-\end{example}
-\begin{example}
-For the swiss-roll in the 2-D space, the parametric equation is $\left\{ \begin{array}{c} x=\theta\cos(\theta)\\ y = \theta\sin(\theta)\end{array}\right.$. Thus, we have the first derivatives and the second derivatives:
-\begin{equation}\label{derivative_swiss}
-\begin{aligned}
-&x'(\theta)=\cos(\theta)-\theta\sin(\theta),\quad y'(\theta)=\sin\theta+\theta\cos\theta\\
-&x''(\theta)=-2\sin\theta-\theta\cos\theta,\quad y''(\theta)=2\cos(\theta)-\theta\sin(\theta).
-\end{aligned}
-\end{equation}
-Substitute \eqref{derivative_swiss} into the equation of curvature, we have $\kappa(\theta)=\frac{2+\theta^2}{(1+\theta^2)^{3/2}}$ and $\kappa'(\theta) =\frac{ -\theta(\theta^2+4)}{(1+\theta^2)^{5/2}}$. For any $\theta\in {\mathbb R}^+$, the curvature decreases with the increasing of $\theta$.
-\end{example}
+%\begin{example}
+%By substituting the derivatives of the 2-D circle's parametric equation  into \eqref{kappa}. we know that the curvature of the circle $\left\{\begin{array}{c}
+%x= \cos(\theta)\\
+%y=\sin(\theta)
+%\end{array}\right.$ is the constant, such that $\kappa(\theta) = 1$ everywhere.
+%\end{example}
+%\begin{example}
+%For the swiss-roll in the 2-D space, the parametric equation is $\left\{ \begin{array}{c} x=\theta\cos(\theta)\\ y = \theta\sin(\theta)\end{array}\right.$. Thus, we have the first derivatives and the second derivatives:
+%\begin{equation}\label{derivative_swiss}
+%\begin{aligned}
+%&x'(\theta)=\cos(\theta)-\theta\sin(\theta),\quad y'(\theta)=\sin\theta+\theta\cos\theta\\
+%&x''(\theta)=-2\sin\theta-\theta\cos\theta,\quad y''(\theta)=2\cos(\theta)-\theta\sin(\theta).
+%\end{aligned}
+%\end{equation}
+%Substitute \eqref{derivative_swiss} into the equation of curvature, we have $\kappa(\theta)=\frac{2+\theta^2}{(1+\theta^2)^{3/2}}$ and $\kappa'(\theta) =\frac{ -\theta(\theta^2+4)}{(1+\theta^2)^{5/2}}$. For any $\theta\in {\mathbb R}^+$, the curvature decreases with the increasing of $\theta$.
+%\end{example}
 %\begin{example}
 %Recalling the function of the triangle curve 
 %$\left\{
@@ -1344,40 +1346,26 @@ Substitute \eqref{derivative_swiss} into the equation of curvature, we have $\ka
 %$
 %which achieves the maximum $\kappa(\theta)=1$ when $\theta=k\pi+\frac{1}{2}\pi, k\in Z$ and $\kappa(\theta)$ achieves the minimum $\kappa(\theta)=0$ when $\theta=k\pi, k\in Z$, which could also be observed from the curve of the function.
 %\end{example}
-\begin{remark}
+%\begin{remark}
 The first 2-D circle example is a curve with constant curvature and the remaining two examples are curves with varying curvature. The swiss-roll is an example which has the curvature monotonously decreasing with the parameter $\theta$. %The triangle curve is an example which has periodic curvature with respect to the parameter.
-\end{remark}
-
-\begin{figure}[t] %  figure placement: here, top, bottom, or page
+%\end{remark}
+\begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
     \includegraphics[width=\linewidth]{circle_result.eps} 
      \includegraphics[width=\linewidth]{swiss_roll.eps} 
      %\includegraphics[width=\linewidth]{sin_curve2.eps} 
+     \vspace{-0.4cm}
    \caption{Comparison between nonlinear projection and linear projection. Left: nonlinear approach. Right: linear approach}
    \label{fig:sin_curve}
 \end{figure}
 
 It is difficult to fit the data drawn from a manifold which is assumed to have varying curvature using a linear model or a tangent plane. Because for $x$ in an area which leads $\kappa(\theta)$ small, the manifold can be approximated by a low-dimensional affine space (a flat plane). However, in a area which has the large curvature $\kappa(\theta)$, such as $\theta=\pi/2$ in our triangle curve case, it is impossible to approximate $y = \sin(\theta)$ by a flat structure. Therefore, it is quit necessary to use a more complicated model to approximate. 
 
-Noting that, our nonlinear second-order fitting function $x_{\cal A}$ is a generalization of the linear function $x_\ell$. When the second order parameter $\cal A$ equal to zero, the derived manifold $\cal M_A$ will degenerate into ${\cal M}_\ell$. By learning $\cal A$, we automatically considering the curvature information hidden in the manifold.
+Noting that, our nonlinear second-order fitting function $x_{\cal A}$ is a generalization of the linear function $x_\ell$. When the second order parameter $\cal A$ equal to zero, the derived manifold $\cal M_A$ will degenerate into ${\cal M}_\ell$. By learning $\cal A$, we automatically considering the curvature information hidden in the manifold. Since our nonlinear second-order fitting model $\cal M_A$ is more complicated by having more parameters compared with ${\cal M}_\ell$, we need to use more data to solve our model. Solving the least square problem with too few data will lead to a phenomenon called `overfitting'. When the overfitting phenomenon occurs, the model will not only learn from the true signal of the underlining manifold, but also the noise factors which will distort our model.
 
+In our fitting model, the number of points used is controlled by the bandwidth parameter $h$. Because the kernel weight is decreased fast with the radius, the contribution of the points resides far from our interested area is ignorable. As a result, our model works well with a relatively larger $h$, which can be seen in the rightmost partition of Figure \eqref{fig:sin_curve}. In Figure \eqref{fig:sin_curve}, we randomly samples the black stars `*' as $x_i = \tilde{x}_i+\sigma_1\epsilon_i$ and the red diamonds `$\diamond$' as $x_i = \tilde{x}_i+\sigma_2\epsilon_i$, where $\tilde{x}_i$ is on the underlining $\cal M$ and $\epsilon_i$ is in the normal space of $\cal M$ at $\tilde{x}_i$. In our experimental setting, we have $\sigma_1=0.2$ and $\sigma_2=0.5$ and the length of $\epsilon_i$ obeys the normal distribution of $N(0,1)$. The blue dots `$\circ$' represent the result, which is the projection onto the fitted structure. 
 
-Since our nonlinear second-order fitting model $\cal M_A$ is more complicated by having more parameters compared with ${\cal M}_\ell$, we need to use more data to solve our model. Solving the least square problem with too few data will lead to a phenomenon called `overfitting'. When the overfitting phenomenon occurs, the model will not only learn from the true signal of the underlining manifold, but also the noise factors which will distort our model.
-
-In our fitting model, the number of points used is controlled by the bandwidth parameter $h$. Because the kernel weight is decreased fast with the radius, the contribution of the points resides far from our interested area is ignorable. As a result, our model works well with a relatively larger $h$, which can be seen in the rightmost partition of Figure \eqref{fig:sin_curve}.
-
-In Figure \eqref{fig:sin_curve}, we randomly samples the black stars `*' as $x_i = \tilde{x}_i+\sigma_1\epsilon_i$ and the red diamonds `$\diamond$' as $x_i = \tilde{x}_i+\sigma_2\epsilon_i$, where $\tilde{x}_i$ is on the underlining $\cal M$ and $\epsilon_i$ is in the normal space of $\cal M$ at $\tilde{x}_i$. In our experimental setting, we have $\sigma_1=0.2$ and $\sigma_2=0.5$ and the length of $\epsilon_i$ obeys the normal distribution of $N(0,1)$. The blue dots `$\circ$' represent the result, which is the projection onto the fitted structure. The leftmost figure is the result obtained from the projection onto the nonlinear $\cal M_A$ and the middle figure stands for the result obtained from the projection onto $\cal M_\ell$.
-
-To evaluate the performance of different results, we define the criteria $c({\hat{\cal M}})$ which represents the percentage of improvement of the corresponding algorithm
-\[
-c({\hat{\cal M}}) = 1-\frac{d(\hat{\cal M}, {\cal M})}{d({\cal D}, {\cal M})},
-\] 
-where $\cal D$ stands for the set corresponding to `$\diamond$' which is the outlier we want to pull towards the underlining $\cal M$ and $\hat{\cal M}$ stands for the set corresponding to `$\circ$' which is the result of different methods. The distance of $d({\cal D}, {\cal M})$ is defined as:
-\[
-d({\cal D}, {\cal M}) = \frac{1}{n} \sum_{x_i\in {\cal D}} \|x_i-\tilde{x}_i\|_2 = \frac{1}{n} \sum_{x_i\in \cal D} \sigma_2\|\epsilon_i\|_2.
-\] 
-By replacing $\cal D$ with $\hat{\cal M}$, we could similarly get $d(\hat{\cal M}, {\cal M})$.
-
+The leftmost figure is the result obtained from the projection onto the nonlinear $\cal M_A$ and the middle figure stands for the result obtained from the projection onto $\cal M_\ell$.
 The rightmost figure shows that with the increasing of the bandwidth $h$, the nonlinear projection result has a better performance (under the measurement of $c({\hat{\cal M}})$) in data recovery aspect compared with the linear projection.
 
 %\begin{figure}[t] %  figure placement: here, top, bottom, or page
@@ -1387,26 +1375,23 @@ The rightmost figure shows that with the increasing of the bandwidth $h$, the no
 %   \label{fig:sin_curve}
 %\end{figure}
 \subsection{Real Data}
-The images of the same person or object taken under the different angles or illumination can be thought as data drawn from a low-dimensional manifold. The images can be thought as vector residing in the relatively high-dimensional space, because the dimension is $m*n$ for an image of size $m\times n$. In our algorithm, we need to estimate the local tangent space from the eigen-decomposition. The computational complexity is $O(m^3*n^3)$ for the eigen-decomposition of the covariance matrix of shape $(m*n)\times (m*n)$, which is very expensive.
-Therefore, if we can apply some methods to reduce the dimension of images by keeping the majority useful information, the computation requirement will be largely reduced.
-
-In order to speed up the algorithm, eigen-face is good idea to apply for images. Denote ${\rm Img}$ as the reshape-operation by transforming a vector of size $m*n$ into a matrix of shape $m\times n$. Therefore, we assume the images are generated as
-\[
+COIL-20 \cite{COIL-20} is a classical manifold image dataset where the photos are taken by rotating an object with a constant speed. As a consequence, the photos of the same object can be thought drawn from a one-dimensional manifold and disturbed by some noise where the intrinsic variable is the rotated angle. %The images of the same person or object taken under the different angles or illumination can be thought as data drawn from a low-dimensional manifold. %The images can be thought as vector residing in the relatively high-dimensional space, because the dimension is $m*n$ for an image of size $m\times n$. In our algorithm, we need to estimate the local tangent space from the eigen-decomposition. The computational complexity is $O(m^3*n^3)$ for the eigen-decomposition of the covariance matrix of shape $(m*n)\times (m*n)$, which is very expensive.Therefore, if we can apply some methods to reduce the dimension of images by keeping the majority useful information, the computation requirement will be largely reduced.
+In order to speed up the algorithm, eigen-face is an applicable dimension reduction method to be applied for images. Denote ${\rm Img}$ as the reshape-operation by transforming a vector of size $m*n$ into a matrix of shape $m\times n$. Therefore, we assume the images are generated as
+$
 I = {\rm Img} (U_{p}(\tilde{x}+\epsilon_1))+\epsilon_2, \tilde{x}\in \cal M,
-\]
+$
 where $\tilde{x}$ is assumed drawn from a $d$ dimensional manifold. The length of the vector $\tilde{x}$ is $p$, which indicates the dimension of the ambient space is $p$. The columns of $U_p$ span a $p$-dimensional subspace in the $m*n$ dimensional Euclidean space. 
-
 Since the images $\{I_1,...,I_n\}$ of the same object share the same $U_p$, as a result, we can recover $U_p$ from the image set through the eigen-decomposion operation.  Then, from the assumption, we know the $p$ dimensional ambient space which the coordinates 
-\[
+$
 \{v_i = U_p^T {\rm vec}(I_i), i = 1,...,k\},
-\]
+$
 of the images under the basis $U_p$ approximately lies on the $d$ dimensional manifold. Therefore, we just need to recover a $d$ dimensional manifold in the ambient space of dimension $p$.
 
-COIL-20 \cite{COIL-20} is a classical manifold image dataset where the photos are taken by rotating an object with a constant speed. As a consequence, the photos of the same object can be thought drawn from a one-dimensional manifold and disturbed by some noise where the intrinsic variable is the rotated angle.
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=\linewidth]{real.eps} 
+   \vspace{-0.4cm}
    \caption{The performance of nonlinear manifold with Coil20 dataset}
    \label{fig:example Coil20}
 \end{figure}

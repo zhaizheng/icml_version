@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.31)  24 JAN 2021 11:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.31)  24 JAN 2021 22:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -415,11 +415,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 108.
 \cv@tmpc@=\count136
 \cv@tmpc=\count137
 )
-(./example_paper.aux
-
-LaTeX Warning: Label `model' multiply defined.
-
-)
+(./example_paper.aux)
 \openout1 = `example_paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -437,7 +433,8 @@ LaTeX Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 44.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Info: Redefining \microtypecontext on input line 44.
@@ -551,25 +548,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Overfull \hbox (26.67085pt too wide) detected at line 175
-[]\OMS/cmsy/m/n/10 M \ D[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 ) 
-= \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 y\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 y \OT1
-/cmr/m/n/10 = \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 U[]^^\ \O
-T1/cmr/m/n/10 + \OML/cmm/m/it/10 U[]^^^[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^\\
-OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; ^^\ \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R[]\OMS
-/cmsy/m/n/10 g \ D[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 )\OML/cm
-m/m/it/10 :
- []
-
-
-Underfull \hbox (badness 1377) in paragraph at lines 175--177
-\OT1/ptm/m/n/10 (+20) where $\OMS/cmsy/m/n/10 D[]\OT1/cmr/m/n/10 (\OML/cmm/m/it
-/10 r\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 j
-k\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 k
- ^^T \OML/cmm/m/it/10 r\OMS/cmsy/m/n/10 g$\OT1/ptm/m/n/10 (+20) , $\OML/cmm/m/i
-t/10 ^^^[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^\\OT1/cmr/m/n/10 ) =
- []
-
 Package epstopdf Info: Source file: <democ3.eps>
 (epstopdf)                    date: 2020-12-24 15:03:00
 (epstopdf)                    size: 75277 bytes
@@ -578,21 +556,22 @@ Package epstopdf Info: Source file: <democ3.eps>
 (epstopdf)                    size: 27650 bytes
 (epstopdf)             Command: <repstopdf --outfile=democ3-eps-converted-to.pd
 f democ3.eps>
-(epstopdf)             \includegraphics on input line 180.
+(epstopdf)             \includegraphics on input line 179.
 Package epstopdf Info: Output file is already uptodate.
+
 <democ3-eps-converted-to.pdf, id=54, 1074.0125pt x 435.6275pt>
 File: democ3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use democ3-eps-converted-to.pdf>
-Package pdftex.def Info: democ3-eps-converted-to.pdf used on input line 180.
+Package pdftex.def Info: democ3-eps-converted-to.pdf used on input line 179.
 (pdftex.def)             Requested size: 234.8775pt x 95.2667pt.
  [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.260 \begin{itemize}
-                      <./democ3-eps-converted-to.pdf>]
+l.308 
+       <./democ3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <demo.eps>
 (epstopdf)                    date: 2020-10-21 11:18:58
 (epstopdf)                    size: 200160 bytes
@@ -601,16 +580,16 @@ Package epstopdf Info: Source file: <demo.eps>
 (epstopdf)                    size: 347519 bytes
 (epstopdf)             Command: <repstopdf --outfile=demo-eps-converted-to.pdf 
 demo.eps>
-(epstopdf)             \includegraphics on input line 339.
+(epstopdf)             \includegraphics on input line 341.
 Package epstopdf Info: Output file is already uptodate.
 
-<demo-eps-converted-to.pdf, id=80, 562.1pt x 421.575pt>
+<demo-eps-converted-to.pdf, id=78, 562.1pt x 421.575pt>
 File: demo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use demo-eps-converted-to.pdf>
-Package pdftex.def Info: demo-eps-converted-to.pdf used on input line 339.
-(pdftex.def)             Requested size: 180.67499pt x 135.50499pt.
-LaTeX Font Info:    Try loading font information for U+bbm on input line 345.
+Package pdftex.def Info: demo-eps-converted-to.pdf used on input line 341.
+(pdftex.def)             Requested size: 164.41353pt x 123.30858pt.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 349.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
@@ -619,15 +598,8 @@ File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.366 \begin{equation}
-                      \label{phi} <./demo-eps-converted-to.pdf>] [4]
-Underfull \hbox (badness 2486) in paragraph at lines 592--594
-\OT1/ptm/m/n/10 (+20) To de-ter-mine the $[]\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 2
-$ \OT1/ptm/m/n/10 (+20) pa-ram-e-ters in $\OML/cmm/m/it/10 ^^R[]$\OT1/ptm/m/n/1
-0 (+20) , we
- []
-
-[5]
+l.401 
+       <./demo-eps-converted-to.pdf>] [4]
 Package epstopdf Info: Source file: <demo3.eps>
 (epstopdf)                    date: 2020-11-21 12:57:46
 (epstopdf)                    size: 53596 bytes
@@ -636,40 +608,27 @@ Package epstopdf Info: Source file: <demo3.eps>
 (epstopdf)                    size: 20487 bytes
 (epstopdf)             Command: <repstopdf --outfile=demo3-eps-converted-to.pdf
  demo3.eps>
-(epstopdf)             \includegraphics on input line 804.
+(epstopdf)             \includegraphics on input line 800.
 Package epstopdf Info: Output file is already uptodate.
- <demo3-eps-converted-to.pdf, id=139, 562.1pt x 421.575pt>
+
+<demo3-eps-converted-to.pdf, id=129, 562.1pt x 421.575pt>
 File: demo3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use demo3-eps-converted-to.pdf>
-Package pdftex.def Info: demo3-eps-converted-to.pdf used on input line 804.
-(pdftex.def)             Requested size: 211.3883pt x 158.54051pt.
-
-Overfull \hbox (10.7709pt too wide) detected at line 860
-[][][]
- []
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
-has been already used, duplicate ignored
+Package pdftex.def Info: demo3-eps-converted-to.pdf used on input line 800.
+(pdftex.def)             Requested size: 187.90271pt x 140.92776pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.879 \]
-         <./demo3-eps-converted-to.pdf>]
-Underfull \hbox (badness 2005) in paragraph at lines 1169--1171
-\OT1/ptm/m/n/10 (+20) Using $\OML/cmm/m/it/10 ^^\[]$\OT1/ptm/m/n/10 (+20) , con
--struct ma-trix $\OML/cmm/m/it/10 G$ \OT1/ptm/m/n/10 (+20) from $\OMS/cmsy/m/n/
-10 f\OML/cmm/m/it/10 ^^\[]\OMS/cmsy/m/n/10 g$ \OT1/ptm/m/n/10 (+20) such as
- []
-
-
-Underfull \vbox (badness 3078) has occurred while \output is active []
-
- [7]
-Overfull \hbox (4.65454pt too wide) detected at line 1324
+l.826 \end{equation}
+                     <./demo3-eps-converted-to.pdf>]
+Overfull \hbox (10.7709pt too wide) detected at line 859
 [][][]
  []
 
+[6]
 Package epstopdf Info: Source file: <circle_result.eps>
 (epstopdf)                    date: 2020-12-22 09:07:53
 (epstopdf)                    size: 157903 bytes
@@ -678,14 +637,14 @@ Package epstopdf Info: Source file: <circle_result.eps>
 (epstopdf)                    size: 89104 bytes
 (epstopdf)             Command: <repstopdf --outfile=circle_result-eps-converte
 d-to.pdf circle_result.eps>
-(epstopdf)             \includegraphics on input line 1353.
+(epstopdf)             \includegraphics on input line 1354.
 Package epstopdf Info: Output file is already uptodate.
-<circle_result-eps-converted-to.pdf, id=184, 1224.575pt x 353.32pt>
+ <circle_result-eps-converted-to.pdf, id=174, 1224.575pt x 353.32pt>
 File: circle_result-eps-converted-to.pdf Graphic file (type pdf)
 
 <use circle_result-eps-converted-to.pdf>
 Package pdftex.def Info: circle_result-eps-converted-to.pdf used on input line 
-1353.
+1354.
 (pdftex.def)             Requested size: 234.8775pt x 67.76765pt.
 Package epstopdf Info: Source file: <swiss_roll.eps>
 (epstopdf)                    date: 2020-12-22 09:00:16
@@ -695,24 +654,19 @@ Package epstopdf Info: Source file: <swiss_roll.eps>
 (epstopdf)                    size: 69346 bytes
 (epstopdf)             Command: <repstopdf --outfile=swiss_roll-eps-converted-t
 o.pdf swiss_roll.eps>
-(epstopdf)             \includegraphics on input line 1354.
+(epstopdf)             \includegraphics on input line 1355.
 Package epstopdf Info: Output file is already uptodate.
 
-<swiss_roll-eps-converted-to.pdf, id=185, 1116.17pt x 343.2825pt>
+<swiss_roll-eps-converted-to.pdf, id=175, 1116.17pt x 343.2825pt>
 File: swiss_roll-eps-converted-to.pdf Graphic file (type pdf)
 
 <use swiss_roll-eps-converted-to.pdf>
 Package pdftex.def Info: swiss_roll-eps-converted-to.pdf used on input line 135
-4.
+5.
 (pdftex.def)             Requested size: 234.8775pt x 72.23811pt.
- [8pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
- has been already used, duplicate ignored
+ [7]
+Underfull \vbox (badness 4024) has occurred while \output is active []
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1366 
-        <./circle_result-eps-converted-to.pdf> <./swiss_roll-eps-converted-to.p
-df>]
 Package epstopdf Info: Source file: <real.eps>
 (epstopdf)                    date: 2021-01-01 14:38:46
 (epstopdf)                    size: 774737 bytes
@@ -721,25 +675,33 @@ Package epstopdf Info: Source file: <real.eps>
 (epstopdf)                    size: 294628 bytes
 (epstopdf)             Command: <repstopdf --outfile=real-eps-converted-to.pdf 
 real.eps>
-(epstopdf)             \includegraphics on input line 1409.
+(epstopdf)             \includegraphics on input line 1393.
 Package epstopdf Info: Output file is already uptodate.
- <real-eps-converted-to.pdf, id=212, 1021.8175pt x 434.62375pt>
+
+<real-eps-converted-to.pdf, id=190, 1021.8175pt x 434.62375pt>
 File: real-eps-converted-to.pdf Graphic file (type pdf)
 
 <use real-eps-converted-to.pdf>
-Package pdftex.def Info: real-eps-converted-to.pdf used on input line 1409.
+Package pdftex.def Info: real-eps-converted-to.pdf used on input line 1393.
 (pdftex.def)             Requested size: 234.8775pt x 99.90167pt.
 
 
-Package natbib Warning: Citation `langley00' undefined on input line 1417.
+Package natbib Warning: Citation `langley00' undefined on input line 1402.
 
-(./example_paper.bbl [9pdfTeX warning (ext4): destination with the same identif
-ier (name{figure.5}) has been already used, duplicate ignored
+(./example_paper.bbl [8pdfTeX warning (ext4): destination with the same identif
+ier (name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.14 
-      <./real-eps-converted-to.pdf>]
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.14 
+      <./circle_result-eps-converted-to.pdf> <./swiss_roll-eps-converted-to.pdf
+> <./real-eps-converted-to.pdf>]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 44.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
@@ -763,31 +725,27 @@ Overfull \hbox (5.42252pt too wide) in paragraph at lines 37--45
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1448.
-[10
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1433.
+[9
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1448.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1433.
  (./example_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1448.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1448.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1433.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1433.
 
 Package rerunfilecheck Info: File `example_paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1448.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1433.
  ) 
 Here is how much of TeX's memory you used:
- 9375 strings out of 492995
- 138844 string characters out of 6132704
- 276565 words of memory out of 5000000
- 12489 multiletter control sequences out of 15000+600000
- 34628 words of font info for 182 fonts, out of 8000000 for 9000
+ 9365 strings out of 492995
+ 138738 string characters out of 6132704
+ 281820 words of memory out of 5000000
+ 12488 multiletter control sequences out of 15000+600000
+ 34427 words of font info for 180 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,12n,45p,1064b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,12n,45p,1070b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc} </Users/dizh
 eng/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
@@ -809,10 +767,10 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on example_paper.pdf (10 pages, 1099775 bytes).
+Output written on example_paper.pdf (9 pages, 1094751 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 272 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
+ 311 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 73 named destinations out of 1000 (max. 500000)
  25119 words of extra memory for PDF output out of 29859 (max. 10000000)
 
