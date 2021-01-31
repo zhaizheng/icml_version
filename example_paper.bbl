@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -18,12 +18,6 @@ Davenport, M.~A., Hegde, C., Duarte, M.~F., and Baraniuk, R.~G.
 \newblock Joint manifolds for data fusion.
 \newblock \emph{IEEE Transactions on Image Processing}, 19\penalty0
   (10):\penalty0 2580--2594, 2010.
-
-\bibitem[Fefferman et~al.(2018)Fefferman, Ivanov, Kurylev, Lassas, and
-  Narayanan]{fefferman2018fitting}
-Fefferman, C., Ivanov, S., Kurylev, Y., Lassas, M., and Narayanan, H.
-\newblock Fitting a putative manifold to noisy data.
-\newblock In \emph{Conference On Learning Theory}, pp.\  688--720, 2018.
 
 \bibitem[Genovese et~al.(2014)Genovese, Perone-Pacifico, Verdinelli, Wasserman,
   et~al.]{genovese2014nonparametric}
@@ -66,21 +60,11 @@ S.~A.~Nene, S. K.~N. and Murase, H.
 \newblock Columbia object image library (coil-20).
 \newblock \emph{Technical Report CUCS-005-96}, 1996.
 
-\bibitem[Sober \& Levin(2019)Sober and Levin]{sober2019manifold}
-Sober, B. and Levin, D.
-\newblock Manifold approximation by moving least-squares projection (mmls).
-\newblock \emph{Constructive Approximation}, pp.\  1--46, 2019.
-
 \bibitem[Tenenbaum et~al.(2000)Tenenbaum, De~Silva, and
   Langford]{tenenbaum2000global}
 Tenenbaum, J.~B., De~Silva, V., and Langford, J.~C.
 \newblock A global geometric framework for nonlinear dimensionality reduction.
 \newblock \emph{science}, 290\penalty0 (5500):\penalty0 2319--2323, 2000.
-
-\bibitem[Yao \& Xia(2019)Yao and Xia]{yao2019manifold}
-Yao, Z. and Xia, Y.
-\newblock Manifold fitting under unbounded noise.
-\newblock \emph{arXiv preprint arXiv:1909.10228}, 2019.
 
 \bibitem[Zhang \& Zha(2004)Zhang and Zha]{zhang2004principal}
 Zhang, Z. and Zha, H.

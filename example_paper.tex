@@ -103,7 +103,8 @@
 \printAffiliationsAndNotice{\icmlEqualContribution} % otherwise use the standard text.
 
 \begin{abstract}
-In this paper, we propose to fit the manifold by a quadratic function defined on the tangent space with a specific form. Compared with the existing linear approximation methods, the quadratic approximation approach can fit the unknown manifold with higher precisions. Because more complicated function is adopted in our manifold fitting process, the pulling back approach turns from the linear least square problem into a nonlinear quartic minimization problem. By bringing in the auxiliary function, we solve the quartic by repeatedly solving a series of quadric minimization problems. Numerical experiments demonstrate that our method has a strong recovery capability compared with the current works.
+
+Manifold fitting is an emerging filed with an interaction of statistics and geometry. In this paper, we propose to fit the manifold with a quadratic function defined on the tangent space with a specific form. Compared with the existing linear-approximation methods, the quadratic-approximation approach can fit the unknown manifold with higher precision. Because a more complicated function is adopted in our manifold fitting process, the pulling-back approach turns the linear least-squares problem into a nonlinear quartic minimization problem. By bringing in the auxiliary function, we solve the quartic by repeatedly solving a series of quadratic minimization problems. Numerical experiments demonstrate that our method has a strong recovery capability compared with other current methods.
 
 %This document provides a basic paper template and submission guidelines.
 %Abstracts must be a single paragraph, ideally between 4--6 sentences long.
@@ -334,53 +335,53 @@ In this paper, we solve the manifold fitting problem via the local quadratic app
 %\end{assumption}
 
 \subsection{Quadratic surface in 3-D space}
-A manifold is a topological space that locally resembles Euclidean space. Except for a few special cases, we cannot have global representation to parameterize the manifold. As a result, we try to approximate the manifold locally within an interested area. First, we show a simple demo for our motivation.
+A manifold is a topological space that locally resembles Euclidean space. Except for a few special cases, we cannot have global representation to parameterize the manifold. As a result, we try to approximate the manifold locally within an interested area. First, we provide a simple demo as an illustration.
 \begin{example}
 \begin{figure}[H] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.7\linewidth]{demo.eps} 
    \vspace{-0.4cm}
-   \caption{ Fitting a manifold with the elliptical paraboloid surface}
+   \caption{Fitting a manifold with the elliptical paraboloid surface}
    \label{3-D paraboloid}
 \end{figure}
 %We give an example by constructing a fitted paraboloid surface in 3-dimensional Space.
-The data of blue circles evenly distributed on a 2-D sphere as shown in \eqref{3-D paraboloid} is a toy example of manifold. Fixing a point $x_0\in {\mathbb S}^2$, we can have a tangent place. The yellow circles are the projection of the data onto the tangent plane. The continuous elliptical paraboloid surface is the structure what we wanted.
+The data, consisting of blue circles evenly distributed on a 2-D sphere as shown in \eqref{3-D paraboloid}, is a toy example of a manifold. Fixing a point $x_0\in {\mathbb S}^2$, we can have a tangent plane. The yellow circles are the projection of the data onto the tangent plane. The continuous elliptical paraboloid surface is the structure we want.
 %As shown in the Figure \eqref{3-D paraboloid}, the yellow circle $\circ$ is the projection of the points from the 3-dimensional ball onto the tangent space. The mesh surface is the fitted structure to locally approximate the manifold (3-dimensional ball). 
-Obviously, from Figure \ref{3-D paraboloid} we can see that the mesh surface is a better structure to approximate $\mathbb{S}^2$ compared with the tangent plane. Here,  the parameterized function of the quadratic form  $x_A(\tau): {\mathbbm R}^2\rightarrow {\mathbbm R}^3$ yields:
+Figure \ref{3-D paraboloid} clearly shows that the mesh surface is a better structure to approximate $\mathbb{S}^2$, compared with the tangent plane. Here, the parameterized function of the quadratic form  $x_A(\tau): {\mathbbm R}^2\rightarrow {\mathbbm R}^3$ yields:
 $
 x_A(\tau) = x_0 + U_{x_0} \tau + {U_{x_0}^\perp} \tau^T A \tau,
 $
-where $A$ is matrix of size $2\times 2$ which is used to control the shape and the direction of the paraboloid surface. The eigenvalues of $A$ represents the curvature or flatness in the corresponding eigenvector direction.
+where $A$ is a matrix of size $2\times 2$ that is used to control the shape and direction of the paraboloid surface. The eigenvalues of $A$ represent the curvature or flatness in the corresponding eigenvector direction.
 \end{example}
 %\remark{In 3-D space, obviously, 
 %when the paraboloid surface is at one side of the tangent plane, the matrix $A$ is positive definite or negative definite.
 %}
 \subsection{Quadratic surface in high-dimensional space }
 
- Instead of fitting the manifold by the tangent plane, we bring a unknown function $\phi_{x_0}(\tau)$ from the tangent space to the normal space
+ Instead of fitting the manifold via the tangent plane, we bring a unknown function $\phi_{x_0}(\tau)$ from the tangent space to the normal space
  \[
  \phi_{x_0}(\tau): {\mathbbm R}^d \rightarrow {\mathbbm R}^{D-d}.
  \] 
- Using  $\phi_{x_0}(\tau)$, we know any manifold $\cal M$ locally at $x_0$ can be written as the range of  function   $x(\tau)$
+ Using  $\phi_{x_0}(\tau)$, we know any manifold $\cal M$ that is local at $x_0$ can be written as the range of  function  $x(\tau)$:
   \begin{equation}\label{model}
   x (\tau)=  x_0 + U_{x_0} \tau+ U_{x_0}^{\perp} \phi_{x_0} (\tau),
   \end{equation}
 where $\phi_{x_0}(\tau)=[\phi_{x_0}^{d+1}(\tau),...,\phi_{x_0}^{D}(\tau)]^T$  is the function from tangent space to the normal space. $\tau$ is the local coordinate in the tangent space.
-From \eqref{model}, we know that there is a one-to-one correspondence between $\phi_{x_0} (\tau)$ and $x(\tau)$ as: %(equivalent to)
+From \eqref{model}, we know that there is a one-to-one correspondence between $\phi_{x_0} (\tau)$ and $x(\tau)$: %(equivalent to)
 \begin{equation}\label{phi}
 \phi_{x_0}(\tau) = {U_{x_0}^{\perp}}^{T}(x(\tau)-x_0)
 \end{equation}
-From \eqref{phi}, we know if we are given the structure of $\phi_{x_0}(\tau)$ with some parameters, we can have the representation of $\phi_{x_0}(\tau)$, for the following reasons:
+From \eqref{phi}, we know that, if we are given the structure of $\phi_{x_0}(\tau)$ with some parameters, we can have the representation of $\phi_{x_0}(\tau)$, for the following reasons:
 %\begin{itemize}
 
-1, $x_0$ is any point on the manifold we are interested in.
+1. $x_0$ is any point on the manifold we are interested in.
 
-2,  $U_{x_0}$ is the basis of principal space at $x_0$ which can be obtained from the local PCA. $U_{x_0}^{\perp}$ is the orthogonal directions at $x_0$ which can also be obtained from the local PCA.
+2.  $U_{x_0}$ is the basis of principal space at $x_0$, which can be obtained from the local PCA. $U_{x_0}^{\perp}$ is the orthogonal direction at $x_0$, which can also be obtained from the local PCA.
 
-3, The only remaining part is  $\phi_{x_0} (\tau)$.
+3. The only remaining part is  $\phi_{x_0} (\tau)$.
 
 %\end{itemize}
-Note that, to implement the local PCA, the local covariance matrix at $x_0$ is defined as $C(x_0) = \sum_i K_h(x_0,x_i) (x_i-x_0)(x_i-x_0)^T$. The basis of the estimated tangent space can be obtained from the eigenvalue decomposition as
+Note that, to implement the local PCA, the local covariance matrix at $x_0$ is defined as $C(x_0) = \sum_i K_h(x_0,x_i) (x_i-x_0)(x_i-x_0)^T$. The basis of the estimated tangent space can be obtained from the eigenvalue decomposition:
 \begin{equation}\label{eign-decom}
 C(x_0) = [U_d , U_{D-d}] 
 \left[
@@ -397,7 +398,7 @@ From the decomposition in \eqref{eign-decom}, we can set the basis on the tangen
 &+\frac{1}{2}{\nabla\nabla\phi_{x_0}(\tau)|_{\tau=0}}(\tau, \tau)+O(\|\tau\|_2^3),
 \end{aligned}
 \end{equation}
-where ${\nabla\nabla\phi_{x_0}(\tau)|_{\tau=0}}$ stands for the second fundamental form which is a three order tensor with the size $ d\times d\times (D-d)$. Acting on $\tau$ twice will result in a vector of size $D-d$.  The linear gradient operator  $\nabla {\phi_{x_0}}(\tau)|_{\tau=0}\in \mathbb{R}^{{(D-d)}\times d}$ acting on $\tau$, will result in a vector in the normal space with the size of $D-d$.
+where ${\nabla\nabla\phi_{x_0}(\tau)|_{\tau=0}}$ stands for the second fundamental form, which is a three-order tensor of size $ d\times d\times (D-d)$. Acting on $\tau$ twice will result in a vector of size $D-d$.  The linear gradient operator  $\nabla {\phi_{x_0}}(\tau)|_{\tau=0}\in \mathbb{R}^{{(D-d)}\times d}$ acting on $\tau$ will result in a vector in the normal space of size $D-d$.
 
 %\begin{theorem}\label{tangent property}
 %If the columns of $U_{x_0}$ consist of  the basis of tangent space of $\cal M$ at $x_0$, then, the nonlinear function $\phi_{x_0}(x)$ satisfies:
