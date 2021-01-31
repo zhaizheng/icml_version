@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2020.9.2)  31 JAN 2021 10:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2020.9.2)  31 JAN 2021 16:39
 entering extended mode
 **./example_paper.tex
 (example_paper.tex
@@ -493,6 +493,14 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 103.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 105.
+
+Underfull \hbox (badness 1558) in paragraph at lines 121--122
+[]\OT1/ptm/m/n/10 (+20) There are two main ap-proaches to han-dle the high-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [1{C:/Users/stayz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
@@ -507,18 +515,21 @@ Package epstopdf Info: Source file: <democ3.eps>
 (epstopdf)             Command: <epstopdf --outfile=democ3-eps-converted-to.pdf democ3.eps>
 (epstopdf)             \includegraphics on input line 180.
 Package epstopdf Info: Output file is already uptodate.
-<democ3-eps-converted-to.pdf, id=53, 1074.0125pt x 435.6275pt>
+<democ3-eps-converted-to.pdf, id=50, 1074.0125pt x 435.6275pt>
 File: democ3-eps-converted-to.pdf Graphic file (type pdf)
 <use democ3-eps-converted-to.pdf>
 Package pdftex.def Info: democ3-eps-converted-to.pdf  used on input line 180.
 (pdftex.def)             Requested size: 234.8775pt x 95.2667pt.
+
+Underfull \vbox (badness 1210) has occurred while \output is active []
+
  [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.309 
-       <./democ3-eps-converted-to.pdf>]
+l.268 \[
+         <./democ3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <demo.eps>
 (epstopdf)                    date: 2020-10-21 11:18:58
 (epstopdf)                    size: 200160 bytes
@@ -528,7 +539,7 @@ Package epstopdf Info: Source file: <demo.eps>
 (epstopdf)             Command: <epstopdf --outfile=demo-eps-converted-to.pdf demo.eps>
 (epstopdf)             \includegraphics on input line 342.
 Package epstopdf Info: Output file is already uptodate.
-<demo-eps-converted-to.pdf, id=77, 562.1pt x 421.575pt>
+<demo-eps-converted-to.pdf, id=75, 562.1pt x 421.575pt>
 File: demo-eps-converted-to.pdf Graphic file (type pdf)
 <use demo-eps-converted-to.pdf>
 Package pdftex.def Info: demo-eps-converted-to.pdf  used on input line 342.
@@ -541,8 +552,8 @@ d
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.402 
-       <./demo-eps-converted-to.pdf>] [4]
+l.400 \end{equation}
+                     <./demo-eps-converted-to.pdf>] [4]
 Package epstopdf Info: Source file: <demo3.eps>
 (epstopdf)                    date: 2020-11-21 12:57:46
 (epstopdf)                    size: 53596 bytes
@@ -552,7 +563,7 @@ Package epstopdf Info: Source file: <demo3.eps>
 (epstopdf)             Command: <epstopdf --outfile=demo3-eps-converted-to.pdf demo3.eps>
 (epstopdf)             \includegraphics on input line 801.
 Package epstopdf Info: Output file is already uptodate.
-<demo3-eps-converted-to.pdf, id=128, 562.1pt x 421.575pt>
+<demo3-eps-converted-to.pdf, id=126, 562.1pt x 421.575pt>
 File: demo3-eps-converted-to.pdf Graphic file (type pdf)
 <use demo3-eps-converted-to.pdf>
 Package pdftex.def Info: demo3-eps-converted-to.pdf  used on input line 801.
@@ -562,13 +573,15 @@ Package pdftex.def Info: demo3-eps-converted-to.pdf  used on input line 801.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.827 \end{equation}
-                     <./demo3-eps-converted-to.pdf>]
+l.818 \subsection
+                 {Projection onto Manifold} <./demo3-eps-converted-to.pdf>]
 Overfull \hbox (10.7709pt too wide) detected at line 860
 [][][]
  []
 
 [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package epstopdf Info: Source file: <circle_result.eps>
 (epstopdf)                    date: 2020-12-22 09:07:53
 (epstopdf)                    size: 157903 bytes
@@ -576,12 +589,12 @@ Package epstopdf Info: Source file: <circle_result.eps>
 (epstopdf)                    date: 2020-12-22 09:09:08
 (epstopdf)                    size: 89104 bytes
 (epstopdf)             Command: <epstopdf --outfile=circle_result-eps-converted-to.pdf circle_result.eps>
-(epstopdf)             \includegraphics on input line 1355.
+(epstopdf)             \includegraphics on input line 1354.
 Package epstopdf Info: Output file is already uptodate.
-<circle_result-eps-converted-to.pdf, id=172, 1224.575pt x 353.32pt>
+<circle_result-eps-converted-to.pdf, id=169, 1224.575pt x 353.32pt>
 File: circle_result-eps-converted-to.pdf Graphic file (type pdf)
 <use circle_result-eps-converted-to.pdf>
-Package pdftex.def Info: circle_result-eps-converted-to.pdf  used on input line 1355.
+Package pdftex.def Info: circle_result-eps-converted-to.pdf  used on input line 1354.
 (pdftex.def)             Requested size: 234.8775pt x 67.76765pt.
 Package epstopdf Info: Source file: <swiss_roll.eps>
 (epstopdf)                    date: 2020-12-22 09:00:16
@@ -590,16 +603,20 @@ Package epstopdf Info: Source file: <swiss_roll.eps>
 (epstopdf)                    date: 2020-12-22 09:00:30
 (epstopdf)                    size: 69346 bytes
 (epstopdf)             Command: <epstopdf --outfile=swiss_roll-eps-converted-to.pdf swiss_roll.eps>
-(epstopdf)             \includegraphics on input line 1356.
+(epstopdf)             \includegraphics on input line 1355.
 Package epstopdf Info: Output file is already uptodate.
-<swiss_roll-eps-converted-to.pdf, id=173, 1116.17pt x 343.2825pt>
+<swiss_roll-eps-converted-to.pdf, id=170, 1116.17pt x 343.2825pt>
 File: swiss_roll-eps-converted-to.pdf Graphic file (type pdf)
 <use swiss_roll-eps-converted-to.pdf>
-Package pdftex.def Info: swiss_roll-eps-converted-to.pdf  used on input line 1356.
+Package pdftex.def Info: swiss_roll-eps-converted-to.pdf  used on input line 1355.
 (pdftex.def)             Requested size: 234.8775pt x 72.23811pt.
- [7]
-Underfull \vbox (badness 4024) has occurred while \output is active []
 
+Underfull \hbox (badness 1577) in paragraph at lines 1293--1360
+\OT1/ptm/m/n/10 (+20) the cur-va-ture yields quite a sim-ple form: $\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
+x\OT1/cmr/m/n/10 ) =
+ []
+
+[7]
 Package epstopdf Info: Source file: <real.eps>
 (epstopdf)                    date: 2021-01-01 14:38:46
 (epstopdf)                    size: 774737 bytes
@@ -607,33 +624,33 @@ Package epstopdf Info: Source file: <real.eps>
 (epstopdf)                    date: 2021-01-22 15:14:21
 (epstopdf)                    size: 294628 bytes
 (epstopdf)             Command: <epstopdf --outfile=real-eps-converted-to.pdf real.eps>
-(epstopdf)             \includegraphics on input line 1394.
+(epstopdf)             \includegraphics on input line 1393.
 Package epstopdf Info: Output file is already uptodate.
-<real-eps-converted-to.pdf, id=188, 1021.8175pt x 434.62375pt>
+<real-eps-converted-to.pdf, id=185, 1021.8175pt x 434.62375pt>
 File: real-eps-converted-to.pdf Graphic file (type pdf)
 <use real-eps-converted-to.pdf>
-Package pdftex.def Info: real-eps-converted-to.pdf  used on input line 1394.
+Package pdftex.def Info: real-eps-converted-to.pdf  used on input line 1393.
 (pdftex.def)             Requested size: 234.8775pt x 99.90167pt.
 
 
-Package natbib Warning: Citation `langley00' undefined on input line 1403.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-(example_paper.bbl [8pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used,
- duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.14 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignor
-ed
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.14 
-      <./circle_result-eps-converted-to.pdf> <./swiss_roll-eps-converted-to.pdf> <./real-eps-converted-to.pdf>]
+l.1400 
+        <./circle_result-eps-converted-to.pdf> <./swiss_roll-eps-converted-to.pdf>]
+
+Package natbib Warning: Citation `langley00' undefined on input line 1402.
+
+(example_paper.bbl
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 38.
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -654,26 +671,29 @@ Overfull \hbox (5.42252pt too wide) in paragraph at lines 31--39
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1434.
-[9
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1433.
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1434.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1433 \end{document}
+                      <./real-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1433.
  (example_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1434.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1434.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1433.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1433.
 Package rerunfilecheck Info: File `example_paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1434.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1433.
  ) 
 Here is how much of TeX's memory you used:
- 9281 strings out of 492891
- 137012 string characters out of 3133349
- 284809 words of memory out of 3000000
+ 9286 strings out of 492891
+ 137059 string characters out of 3133349
+ 280617 words of memory out of 3000000
  12780 multiletter control sequences out of 15000+200000
- 34434 words of font info for 179 fonts, out of 3000000 for 9000
+ 34628 words of font info for 182 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,12n,45p,1072b,512s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,12n,45p,1086b,512s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\stayz\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/pub
 lic/bbm/dpi600\bbm10.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/
@@ -687,9 +707,9 @@ c/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on example_paper.pdf (9 pages, 1129588 bytes).
+Output written on example_paper.pdf (9 pages, 1129743 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
+ 300 PDF objects out of 1000 (max. 8388607)
  70 named destinations out of 1000 (max. 500000)
  25119 words of extra memory for PDF output out of 29859 (max. 10000000)
 
