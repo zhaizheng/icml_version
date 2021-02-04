@@ -1,13 +1,24 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: example_paper.aux
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: example_paper.aux
 The style file: icml2021.bst
 Database file #1: bibfile.bib
 Repeated entry---line 220 of file bibfile.bib
  : @article{genovese2014nonparametric
  :                                   ,
 I'm skipping whatever remains of this entry
+You're missing a field name---line 234 of file bibfile.bib
+ :  
+ :  %editor = {Z. Ghahramani and M. Welling and C. Cortes and N. Lawrence and K. Q. Weinberger},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Repeated entry---line 243 of file bibfile.bib
  : @article{ozertem2011locally
  :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 267 of file bibfile.bib
+ : @inproceedings{fefferman2018fitting
+ :                                    ,
 I'm skipping whatever remains of this entry
 Repeated entry---line 275 of file bibfile.bib
  : @article{panaretos2014principal
@@ -25,6 +36,11 @@ Repeated entry---line 326 of file bibfile.bib
  : @article{genovese2014nonparametric
  :                                   ,
 I'm skipping whatever remains of this entry
+You're missing a field name---line 365 of file bibfile.bib
+ :   
+ :   %url     = {http://jmlr.org/papers/v17/ariascastro16a.html}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Repeated entry---line 375 of file bibfile.bib
  : @article{davenport2010joint
  :                            ,
@@ -33,5 +49,69 @@ Repeated entry---line 485 of file bibfile.bib
  : @article{zhang2004principal
  :                            ,
 I'm skipping whatever remains of this entry
+You're missing a field name---line 513 of file bibfile.bib
+ :  
+ :  % publisher={IEEE}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 574 of file bibfile.bib
+ : 
+ : %isbn = {9781439820506},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 622 of file bibfile.bib
+ :   
+ :   %organization={IEEE Computer Society}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 661 of file bibfile.bib
+ :   
+ :   %organization={IEEE}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "langley00"
-(There were 8 error messages)
+Warning--empty title in NIPS2014_5ca3e9b1
+Warning--empty year in NIPS2014_5ca3e9b1
+Warning--empty year in NIPS2014_5ca3e9b1
+You've used 18 entries,
+            2773 wiz_defined-function locations,
+            717 strings with 7905 characters,
+and the built_in function-call counts, 9357 in all, are:
+= -- 849
+> -- 530
+< -- 15
++ -- 177
+- -- 159
+* -- 793
+:= -- 1390
+add.period$ -- 53
+call.type$ -- 18
+change.case$ -- 104
+chr.to.int$ -- 18
+cite$ -- 39
+duplicate$ -- 407
+empty$ -- 767
+format.name$ -- 199
+if$ -- 1972
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 19
+newline$ -- 97
+num.names$ -- 72
+pop$ -- 198
+preamble$ -- 1
+purify$ -- 88
+quote$ -- 0
+skip$ -- 330
+stack$ -- 0
+substring$ -- 485
+swap$ -- 52
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 193
+warning$ -- 3
+while$ -- 87
+width$ -- 0
+write$ -- 236
+(There were 15 error messages)

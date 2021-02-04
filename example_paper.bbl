@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -9,8 +9,21 @@
 Belkin, M. and Niyogi, P.
 \newblock Laplacian eigenmaps for dimensionality reduction and data
   representation.
-\newblock \emph{Neural computation}, 15\penalty0 (6):\penalty0 1373--1396,
+\newblock \emph{Neural Computation}, 15\penalty0 (6):\penalty0 1373--1396,
   2003.
+
+\bibitem[Cheng \& Wu(2013)Cheng and Wu]{cheng2013local}
+Cheng, M.-Y. and Wu, H.-t.
+\newblock Local linear regression on manifolds and its geometric
+  interpretation.
+\newblock \emph{Journal of the American Statistical Association}, 108\penalty0
+  (504):\penalty0 1421--1434, 2013.
+
+\bibitem[Comaniciu \& Meer(1999)Comaniciu and Meer]{comaniciu1999mean}
+Comaniciu, D. and Meer, P.
+\newblock Mean shift analysis and applications.
+\newblock In \emph{Proceedings of the Seventh IEEE International Conference on
+  Computer Vision}, volume~2, pp.\  1197--1203, 1999.
 
 \bibitem[Davenport et~al.(2010)Davenport, Hegde, Duarte, and
   Baraniuk]{davenport2010joint}
@@ -19,6 +32,19 @@ Davenport, M.~A., Hegde, C., Duarte, M.~F., and Baraniuk, R.~G.
 \newblock \emph{IEEE Transactions on Image Processing}, 19\penalty0
   (10):\penalty0 2580--2594, 2010.
 
+\bibitem[Fefferman et~al.(2016)Fefferman, Mitter, and
+  Narayanan]{fefferman2016testing}
+Fefferman, C., Mitter, S., and Narayanan, H.
+\newblock Testing the manifold hypothesis.
+\newblock \emph{Journal of the American Mathematical Society}, 29\penalty0
+  (4):\penalty0 983--1049, 2016.
+
+\bibitem[Fefferman et~al.(2018)Fefferman, Ivanov, Kurylev, Lassas, and
+  Narayanan]{fefferman2018fitting}
+Fefferman, C., Ivanov, S., Kurylev, Y., Lassas, M., and Narayanan, H.
+\newblock Fitting a putative manifold to noisy data.
+\newblock In \emph{Conference On Learning Theory}, pp.\  688--720, 2018.
+
 \bibitem[Genovese et~al.(2014)Genovese, Perone-Pacifico, Verdinelli, Wasserman,
   et~al.]{genovese2014nonparametric}
 Genovese, C.~R., Perone-Pacifico, M., Verdinelli, I., Wasserman, L., et~al.
@@ -26,16 +52,16 @@ Genovese, C.~R., Perone-Pacifico, M., Verdinelli, I., Wasserman, L., et~al.
 \newblock \emph{The Annals of Statistics}, 42\penalty0 (4):\penalty0
   1511--1545, 2014.
 
-\bibitem[Goodfellow et~al.(2014)Goodfellow, Pouget-Abadie, Mirza, Xu,
-  Warde-Farley, Ozair, Courville, and Bengio]{NIPS2014_5ca3e9b1}
+\bibitem[Goodfellow et~al.()Goodfellow, Pouget-Abadie, Mirza, Xu, Warde-Farley,
+  Ozair, Courville, and Bengio]{NIPS2014_5ca3e9b1}
 Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair,
   S., Courville, A., and Bengio, Y.
-\newblock Generative adversarial nets.
-\newblock In Ghahramani, Z., Welling, M., Cortes, C., Lawrence, N., and
-  Weinberger, K.~Q. (eds.), \emph{Advances in Neural Information Processing
-  Systems}, volume~27, pp.\  2672--2680. Curran Associates, Inc., 2014.
-\newblock URL
-  \url{https://proceedings.neurips.cc/paper/2014/file/5ca3e9b122f61f8f06494c97b1afccf3-Paper.pdf}.
+\newblock In \emph{Advances in Neural Information Processing Systems}.
+
+\bibitem[Horn \& Johnson(2012)Horn and Johnson]{horn2012matrix}
+Horn, R.~A. and Johnson, C.~R.
+\newblock \emph{Matrix analysis}.
+\newblock Cambridge University Press, 2012.
 
 \bibitem[Ozertem \& Erdogmus(2011)Ozertem and Erdogmus]{ozertem2011locally}
 Ozertem, U. and Erdogmus, D.
@@ -53,24 +79,42 @@ Panaretos, V.~M., Pham, T., and Yao, Z.
 \bibitem[Roweis \& Saul(2000)Roweis and Saul]{roweis2000nonlinear}
 Roweis, S.~T. and Saul, L.~K.
 \newblock Nonlinear dimensionality reduction by locally linear embedding.
-\newblock \emph{science}, 290\penalty0 (5500):\penalty0 2323--2326, 2000.
+\newblock \emph{Science}, 290\penalty0 (5500):\penalty0 2323--2326, 2000.
 
 \bibitem[S.~A.~Nene \& Murase(1996)S.~A.~Nene and Murase]{COIL-20}
 S.~A.~Nene, S. K.~N. and Murase, H.
 \newblock Columbia object image library (coil-20).
 \newblock \emph{Technical Report CUCS-005-96}, 1996.
 
+\bibitem[Slavkovi{\'c} \& Jevti{\'c}(2012)Slavkovi{\'c} and
+  Jevti{\'c}]{slavkovic2012face}
+Slavkovi{\'c}, M. and Jevti{\'c}, D.
+\newblock Face recognition using eigenface approach.
+\newblock \emph{Serbian Journal of Electrical Engineering}, 9\penalty0
+  (1):\penalty0 121--130, 2012.
+
 \bibitem[Tenenbaum et~al.(2000)Tenenbaum, De~Silva, and
   Langford]{tenenbaum2000global}
 Tenenbaum, J.~B., De~Silva, V., and Langford, J.~C.
 \newblock A global geometric framework for nonlinear dimensionality reduction.
-\newblock \emph{science}, 290\penalty0 (5500):\penalty0 2319--2323, 2000.
+\newblock \emph{Science}, 290\penalty0 (5500):\penalty0 2319--2323, 2000.
+
+\bibitem[Turk \& Pentland(1991)Turk and Pentland]{turk1991face}
+Turk, M.~A. and Pentland, A.~P.
+\newblock Face recognition using eigenfaces.
+\newblock In \emph{IEEE Computer Society Conference on Computer Vision and
+  Pattern Recognition}, pp.\  586--587, 1991.
+
+\bibitem[Zha \& Zhang(2009)Zha and Zhang]{zha2009spectral}
+Zha, H. and Zhang, Z.
+\newblock Spectral properties of the alignment matrices in manifold learning.
+\newblock \emph{SIAM Review}, 51\penalty0 (3):\penalty0 545--566, 2009.
 
 \bibitem[Zhang \& Zha(2004)Zhang and Zha]{zhang2004principal}
 Zhang, Z. and Zha, H.
 \newblock Principal manifolds and nonlinear dimensionality reduction via
   tangent space alignment.
-\newblock \emph{SIAM journal on scientific computing}, 26\penalty0
+\newblock \emph{SIAM Journal on Scientific Computing}, 26\penalty0
   (1):\penalty0 313--338, 2004.
 
 \end{thebibliography}

@@ -16,10 +16,11 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{fefferman2016testing}
 \citation{panaretos2014principal,davenport2010joint}
 \citation{NIPS2014_5ca3e9b1}
 \citation{roweis2000nonlinear}
-\citation{zhang2004principal}
+\citation{zhang2004principal,zha2009spectral}
 \citation{tenenbaum2000global}
 \citation{belkin2003laplacian}
 \citation{genovese2014nonparametric,ozertem2011locally}
@@ -27,6 +28,7 @@
 \newlabel{estimator1}{{1}{2}{}{equation.1.1}{}}
 \newlabel{manifold}{{2}{2}{}{equation.1.2}{}}
 \newlabel{Comparison}{{1}{2}{The reliance of the origin point in the process of manifold fitting and projection}{figure.1}{}}
+\citation{horn2012matrix}
 \newlabel{quadratic_f}{{3}{3}{}{equation.2.3}{}}
 \newlabel{3-D paraboloid}{{2}{3}{Fitting a manifold with the elliptical paraboloid surface}{figure.2}{}}
 \newlabel{model}{{4}{3}{}{equation.2.4}{}}
@@ -39,35 +41,48 @@
 \newlabel{x_tau}{{11}{4}{}{equation.2.11}{}}
 \newlabel{normal_appro}{{12}{4}{}{equation.2.12}{}}
 \newlabel{normal_approx}{{13}{4}{}{equation.2.13}{}}
+\citation{cheng2013local}
 \newlabel{g_i}{{14}{5}{}{equation.2.14}{}}
-\newlabel{M_A}{{15}{5}{}{equation.2.15}{}}
-\newlabel{optimal}{{16}{5}{}{equation.2.16}{}}
-\newlabel{fig:demo}{{3}{5}{Demo for the projection via solving the nonlinear least-squares problem. The blue stars `*' are the discrete samples that are assumed to be approximately sampled from some manifold. The paraboloid curve is our fitted manifold with the second-order term taken into consideration. The blue diamonds `$\diamond $' are the outliers, which can be of any type or distribution. In this demo, we let the outliers be samples from the $\sin $ curve. The red dots `$\circ $' are the projections of `$\diamond $' onto the paraboloid curve (the fitted manifold). In this section, we provide the algorithm to find the projection of outliers onto the fitted second-order function}{figure.3}{}}
-\newlabel{manifold_representation}{{17}{5}{}{equation.3.17}{}}
-\newlabel{projection}{{18}{6}{}{equation.3.18}{}}
-\newlabel{projection_tau}{{19}{6}{}{equation.3.19}{}}
-\newlabel{nonlinear_projection}{{20}{6}{}{equation.3.20}{}}
-\newlabel{simiplified_nonlinear}{{21}{6}{}{equation.3.21}{}}
-\newlabel{f_tau}{{22}{6}{}{equation.3.22}{}}
-\newlabel{min_tau_n}{{23}{6}{}{equation.3.23}{}}
+\newlabel{optimal}{{2.5}{5}{}{subsection.2.5}{}}
+\newlabel{fig:demo}{{3}{5}{}{figure.3}{}}
+\newlabel{manifold_representation}{{15}{5}{}{equation.3.15}{}}
+\citation{comaniciu1999mean}
+\newlabel{projection}{{16}{6}{}{equation.3.16}{}}
+\newlabel{projection_tau}{{17}{6}{}{equation.3.17}{}}
+\newlabel{nonlinear_projection}{{18}{6}{}{equation.3.18}{}}
+\newlabel{simiplified_nonlinear}{{19}{6}{}{equation.3.19}{}}
+\newlabel{f_tau}{{20}{6}{}{equation.3.20}{}}
+\newlabel{min_tau_n}{{21}{6}{}{equation.3.21}{}}
 \newlabel{nonlinear projection}{{4}{6}{}{section.4}{}}
-\newlabel{weighted_mean}{{24}{7}{}{equation.4.24}{}}
+\citation{genovese2014nonparametric}
+\citation{fefferman2018fitting}
+\newlabel{weighted_mean}{{22}{7}{}{equation.4.22}{}}
 \newlabel{alg:Fitting}{{1}{7}{}{algorithm.1}{}}
 \newlabel{alg:projection}{{2}{7}{}{algorithm.2}{}}
 \newlabel{alg:Fitting and Projection}{{3}{7}{}{algorithm.3}{}}
 \citation{COIL-20}
-\newlabel{fig:sin_curve}{{4}{8}{Comparison between nonlinear projection and linear projection. Left: nonlinear approach. Right: linear approach}{figure.4}{}}
+\citation{slavkovic2012face,turk1991face}
 \citation{langley00}
 \bibdata{bibfile}
 \bibcite{belkin2003laplacian}{{1}{2003}{{Belkin \& Niyogi}}{{Belkin and Niyogi}}}
-\bibcite{davenport2010joint}{{2}{2010}{{Davenport et~al.}}{{Davenport, Hegde, Duarte, and Baraniuk}}}
-\bibcite{genovese2014nonparametric}{{3}{2014}{{Genovese et~al.}}{{Genovese, Perone-Pacifico, Verdinelli, Wasserman, et~al.}}}
-\bibcite{NIPS2014_5ca3e9b1}{{4}{2014}{{Goodfellow et~al.}}{{Goodfellow, Pouget-Abadie, Mirza, Xu, Warde-Farley, Ozair, Courville, and Bengio}}}
-\bibcite{ozertem2011locally}{{5}{2011}{{Ozertem \& Erdogmus}}{{Ozertem and Erdogmus}}}
-\bibcite{panaretos2014principal}{{6}{2014}{{Panaretos et~al.}}{{Panaretos, Pham, and Yao}}}
-\bibcite{roweis2000nonlinear}{{7}{2000}{{Roweis \& Saul}}{{Roweis and Saul}}}
-\bibcite{COIL-20}{{8}{1996}{{S.~A.~Nene \& Murase}}{{S.~A.~Nene and Murase}}}
-\bibcite{tenenbaum2000global}{{9}{2000}{{Tenenbaum et~al.}}{{Tenenbaum, De~Silva, and Langford}}}
-\bibcite{zhang2004principal}{{10}{2004}{{Zhang \& Zha}}{{Zhang and Zha}}}
+\newlabel{fig:sin_curve}{{4}{8}{Comparison between nonlinear projection and linear projection. Left: nonlinear approach. Middle: linear approach. Right: the criteria $c(\hat {\cal M})$ for nonlinear and linear approach varies with $h$}{figure.4}{}}
+\newlabel{circle_result}{{5.1}{8}{}{figure.4}{}}
+\newlabel{fig:example Coil20}{{5}{8}{The performance of a nonlinear manifold with Coil20 dataset}{figure.5}{}}
+\bibcite{cheng2013local}{{2}{2013}{{Cheng \& Wu}}{{Cheng and Wu}}}
+\bibcite{comaniciu1999mean}{{3}{1999}{{Comaniciu \& Meer}}{{Comaniciu and Meer}}}
+\bibcite{davenport2010joint}{{4}{2010}{{Davenport et~al.}}{{Davenport, Hegde, Duarte, and Baraniuk}}}
+\bibcite{fefferman2016testing}{{5}{2016}{{Fefferman et~al.}}{{Fefferman, Mitter, and Narayanan}}}
+\bibcite{fefferman2018fitting}{{6}{2018}{{Fefferman et~al.}}{{Fefferman, Ivanov, Kurylev, Lassas, and Narayanan}}}
+\bibcite{genovese2014nonparametric}{{7}{2014}{{Genovese et~al.}}{{Genovese, Perone-Pacifico, Verdinelli, Wasserman, et~al.}}}
+\bibcite{NIPS2014_5ca3e9b1}{{8}{}{{Goodfellow et~al.}}{{Goodfellow, Pouget-Abadie, Mirza, Xu, Warde-Farley, Ozair, Courville, and Bengio}}}
+\bibcite{horn2012matrix}{{9}{2012}{{Horn \& Johnson}}{{Horn and Johnson}}}
+\bibcite{ozertem2011locally}{{10}{2011}{{Ozertem \& Erdogmus}}{{Ozertem and Erdogmus}}}
+\bibcite{panaretos2014principal}{{11}{2014}{{Panaretos et~al.}}{{Panaretos, Pham, and Yao}}}
+\bibcite{roweis2000nonlinear}{{12}{2000}{{Roweis \& Saul}}{{Roweis and Saul}}}
+\bibcite{COIL-20}{{13}{1996}{{S.~A.~Nene \& Murase}}{{S.~A.~Nene and Murase}}}
+\bibcite{slavkovic2012face}{{14}{2012}{{Slavkovi{\'c} \& Jevti{\'c}}}{{Slavkovi{\'c} and Jevti{\'c}}}}
+\bibcite{tenenbaum2000global}{{15}{2000}{{Tenenbaum et~al.}}{{Tenenbaum, De~Silva, and Langford}}}
+\bibcite{turk1991face}{{16}{1991}{{Turk \& Pentland}}{{Turk and Pentland}}}
+\bibcite{zha2009spectral}{{17}{2009}{{Zha \& Zhang}}{{Zha and Zhang}}}
+\bibcite{zhang2004principal}{{18}{2004}{{Zhang \& Zha}}{{Zhang and Zha}}}
 \bibstyle{icml2021}
-\newlabel{fig:example Coil20}{{5}{9}{The performance of a nonlinear manifold with Coil20 dataset}{figure.5}{}}
